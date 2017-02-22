@@ -1,0 +1,42 @@
+/* 重置样式 */
+body, ul, li, ol, figure, p, h1, h2, h3, h4, h5, h6, dl, dd{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+}
+
+ul, li, ol{
+    list-style: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: normal;
+}
+
+/*保证body有高度,默认body无高度*/
+body, html{
+    height: 100%;
+    font-size: 12px;
+    font-family: "微软雅黑";
+    color: #333; /*一般不用000,太黑了*/
+    background: #EEE;
+}
+
+img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.clearFix:after{
+    content: "";
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    zoom: 1;
+    visibility: hidden;
+}

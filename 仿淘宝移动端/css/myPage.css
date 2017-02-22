@@ -1,0 +1,44 @@
+/*个人主页 头部*/
+body{
+    font-family: 'Helvetica Neue';
+    color: #051b28;
+}
+header{
+    background: url("https://gw.alicdn.com/tfscom/TB10.51HFXXXXXqXpXXYx6l2pXX-750-235.jpg_q90") no-repeat top;
+    /*cover:此时会保持图像的纵横比并将图像缩放成将完全覆盖背景定位区域的最小大小。*/
+    background-size: cover;
+    height: 3.133rem;
+    position: relative;
+}
+.userImg{
+    width: 1.867rem;
+    height: 1.867rem;
+    position: absolute;
+    bottom:-1rem;
+    left:.467rem;
+    padding:.067rem;
+    background:rgba(255,255,255,.7);
+    text-align: center;
+    border-radius: 50%;
+    z-index: 10;
+}
+header .userImg img{
+    border-radius: 50%;
+}
+
+.user-behavior{
+    position: relative;
+    height: 1.44rem;
+    background-color: #fff;
+}
+.user-behavior ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    padding-left:2.267rem;
+    font-size:28px;
+}
+.user-behavior ul li{
+
+}
