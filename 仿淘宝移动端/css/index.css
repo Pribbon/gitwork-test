@@ -428,7 +428,7 @@ header .right span{
     position: relative;
 }
 .recommend ul li:nth-child(1){
-    width: 80%;
+    width: 81%;
     margin-right: 5px;
     box-sizing: border-box;
 }
