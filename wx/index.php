@@ -95,6 +95,10 @@ $signPackage = $jssdk->GetSignPackage();
 				});
 			}
 			
+			function code(){
+				
+			}
+			
 			function local(){
 				wx.getLocation({
 				    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
@@ -115,6 +119,12 @@ $signPackage = $jssdk->GetSignPackage();
 				    }
 				});
 			}
+			
+			/*在ready(function(){});中写的方法要用id获取绑定onclick方法的形式,不能用function local()的方法,
+			 * 因为在ready(function(){});中local是局部变量,在div中调用local()是调用不到的.*/
+			/*wx.ready(function(){ //相当于js中的window.onload=function(){}	方法,也跟ready(function(){});一样,要用id绑定onclick方法
+			  			
+			});*/
 		</script>
 	</body>
 </html>
