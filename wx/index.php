@@ -32,6 +32,7 @@ $signPackage = $jssdk->GetSignPackage();
 			点击扫码
 		</button>
 		<img src="" id="img"/>
+
 		<script type="text/javascript">
 			wx.config({
 				debug: true, // 开启调试功能，如果为true每进行一次操作都会弹出
@@ -79,8 +80,7 @@ $signPackage = $jssdk->GetSignPackage();
 				] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			});
 			
-			var img = document.querySelector("#img");
-			img.onclick = function(){
+			function test(){
 				wx.chooseImage({
 				    count: 1, // 默认9
 				    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
