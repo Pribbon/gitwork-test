@@ -12,9 +12,26 @@ $signPackage = $jssdk->GetSignPackage();
 		<meta name="viewport" content="width=device-width" />
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<style type="text/css">
+			body{
+				
+			}
+			button{
+				width: 80%;
+				height: 40px;
+				background: green;
+				color: #fff;
+				border-radius: 5px;
+			}
 		</style>
 	</head>
 	<body>
+		<button onclick="test()">
+			点击拍照
+		</button>
+		<button onclick="code()">
+			点击扫码
+		</button>
+		<img src="" id="img"/>
 		<script type="text/javascript">
 			wx.config({
 				debug: true, // 开启调试功能，如果为true每进行一次操作都会弹出
@@ -62,6 +79,25 @@ $signPackage = $jssdk->GetSignPackage();
 				] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			});
 			
+			var img = document.querySelector("#img");
+			img.onclick = function(){
+				wx.chooseImage({
+				    count: 1, // 默认9
+				    sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
+				    sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
+				    success: function (res) {
+				        var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
+				        img.src = localIds[0];
+				    }
+				});
+			}
+			
+			
+			
+			wx.previewImage({
+    			current: '', // 当前显示图片的http链接
+    			urls: [] // 需要预览的图片http链接列表
+			});
 		</script>
 	</body>
 </html>
