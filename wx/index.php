@@ -33,7 +33,7 @@ $signPackage = $jssdk->GetSignPackage();
 		</button>
 		<img src="" id="img"/>
 		<button onclick="local()">
-			
+			点击获取位置
 		</button>
 
 		<script type="text/javascript">
@@ -106,12 +106,13 @@ $signPackage = $jssdk->GetSignPackage();
 					        var speed = res.speed; // 速度，以米/每秒计
 					        var accuracy = res.accuracy; // 位置精度
 					        
-					        wx.startSearchBeacons({
-								ticket:"",  //摇周边的业务ticket, 系统自动添加在摇出来的页面链接后面
-								complete:function(argv){
-									//开启查找完成后的回调函数
-									alert("定位成功!");
-								}
+					        wx.openLocation({
+							    latitude: 0, // 纬度，浮点数，范围为90 ~ -90
+							    longitude: 0, // 经度，浮点数，范围为180 ~ -180。
+							    name: '育知同创', // 位置名
+							    address: '七星创意工厂', // 地址详情说明
+							    scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
+							    infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
 							});
 					    }
 					});
