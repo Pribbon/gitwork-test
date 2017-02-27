@@ -59,7 +59,6 @@ $signPackage = $jssdk->GetSignPackage();
 </body>
 <script type="text/javascript">
     window.onload = (function(){
-        var local = document.getElementById("local");
         wx.config({
             debug: true, // 开启调试功能，如果为true每进行一次操作都会弹出
             appId: '<?php echo $signPackage["appId"];?>', // 必填，公众号的唯一标识(字符串)
@@ -126,7 +125,7 @@ $signPackage = $jssdk->GetSignPackage();
                 }
             });
         })();*/
-
+        var local = document.getElementById("local");
         local.onclick = function(){
             wx.getLocation({
                 type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
@@ -147,7 +146,6 @@ $signPackage = $jssdk->GetSignPackage();
                 }
             });
         }
-        local();
     })();
 
 </script>
