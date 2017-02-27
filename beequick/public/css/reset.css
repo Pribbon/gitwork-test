@@ -8,7 +8,7 @@ textarea {resize:none}
 input:focus, select:focus, textarea:focus {outline:0 none}
 ul, ol,li {list-style:none outside none}
 
-body,html{height:100%; font-size:12px; font-family:"微软雅黑"; color:#333; background:#fff}
+body,html{height:100%; font-size:14px; font-family:"微软雅黑"; color:#333; background:#fff}
 img{display:block;}
 /*设一个清除浮动的class*/
 .clearfix:after{
