@@ -12,9 +12,6 @@ $signPackage = $jssdk->GetSignPackage();
 		<meta name="viewport" content="width=device-width" />
 		<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 		<style type="text/css">
-			body{
-				
-			}
 			button{
 				width: 80%;
 				height: 40px;
@@ -82,7 +79,8 @@ $signPackage = $jssdk->GetSignPackage();
 			        'openCard'
 				] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
 			});
-			
+
+			//点击拍照
 			function test(){
 				wx.chooseImage({
 				    count: 1, // 默认9,选择照片的张数
@@ -94,7 +92,8 @@ $signPackage = $jssdk->GetSignPackage();
 				    }
 				});
 			}
-			
+
+			//点击扫码
 			function code(){
 				wx.scanQRCode({
 				    needResult: 0, // 默认为0，扫描结果由微信处理，1则直接返回扫描结果，
@@ -104,7 +103,8 @@ $signPackage = $jssdk->GetSignPackage();
 				}
 				});
 			}
-			
+
+			//点击获取位置
 			function local(){
 				wx.getLocation({
 				    type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'

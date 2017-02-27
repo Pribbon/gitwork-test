@@ -3,13 +3,12 @@ body, div, dl, dt, dd, ul, ol, nl, li, h1, h2, h3, h4, h5, h6, p, span, a, b, st
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 table {border-collapse:collapse;border-spacing:0}
 a {text-decoration:none}
-a:hover {text-decoration:underline}
 fieldset, img {border:0 none}
 textarea {resize:none}
 input:focus, select:focus, textarea:focus {outline:0 none}
 ul, ol,li {list-style:none outside none}
 
-body,html{height:100%; font-size:12px; font-family:"微软雅黑"; color:#333; background:#fff}
+body,html{height:100%; font-size:14px; font-family:"微软雅黑"; color:#333; background:#fff}
 img{display:block;}
 /*设一个清除浮动的class*/
 .clearfix:after{
