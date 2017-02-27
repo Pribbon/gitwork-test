@@ -63,6 +63,18 @@ header .more p{
     display: none;
 }
 
+/*搜索定位*/
+.beequick-search-position{
+    height:1.47rem;
+    background-color:#ffd600;
+    display: flex;
+    justify-content: space-between;
+}
+.beequick-search-position>div{
+    width: 33%;
+    border:1px solid red;
+}
+
 /*底部*/
 footer{
     height:1.56rem;
@@ -81,7 +93,7 @@ footer ul{
 footer li{
     width: 25%;
     height: 100%;
-    border:1px solid red;
+    /*border:1px solid red;*/
     position: relative;
 }
 footer li a div:first-child{
