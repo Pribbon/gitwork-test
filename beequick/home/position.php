@@ -10,6 +10,7 @@ $signPackage = $jssdk->GetSignPackage();
     <meta charset="UTF-8">
     <title>定位</title>
     <link rel="stylesheet" href="../public/css/reset.css">
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <style type="text/css">
         body{
             background-color: #FFD82B;
