@@ -2,9 +2,172 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>搜索框</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style type="text/css">
+        html{
+            background-color: white;
+        }
+        body{
+            background-color: #efefef;
+            width: 10rem;
+            margin: auto;
+        }
+        header{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            width: 10rem;
+            margin: auto;
+        }
+        header{
+            height: 1.72rem;
+            background-color: #f9fafd;
+            font-size:.43rem;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .icon-back{
+            width:22% ;
+            height: 100%;
+            background: mediumvioletred;
+            background: url("img/left-arrow.png") 30% 50% no-repeat;
+            background-size:auto .73rem;
+        }
+        header .header-content{
+            width:60% ;
+            margin-top:.38rem;
+        }
+        header .header-content form{
+            width: 5.5rem;
+            height:.96rem;
+            border:1px solid  #e0e0e0;
+            border-radius: 0.125rem;
+            display: flex;
+            flex-direction: row;
+        }
+        header .header-content form input{
+            width: 5rem;
+            height: 90%;
+            width: 83%;
+            outline: none;
+            border:0;
+            margin-top:1%;
+            background-color:#f9fafd ;
+            font-size:.43rem;
+        }
+        header .header-content form .icon-search{
+            width:1.03rem;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAaCAMAAACelLz8AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAACHUExURUxpcdDQ0sPDxZ+fo87O0KWlqdfX2Y6Ok5GRlvT09Nra3KGhpZ6eo6Kipu7u77Ozt52dodHR09vb3ZycoZuboLS0t+zs7e3t7uHh4re3us3N0JKSl5SUmZ+fpJubn5eXnJqan6CgpNvb3OLi49zc3uHh48PDxtzc3djY2ZKSlq2tsLKytfHx8rm9tvQAAAABdFJOUwBA5thmAAAAsklEQVQoz7WR1xKCMBBFA0buGnoXBHvX//8+cQwl0Tx6n07mzGy2MPaJqCJqdpVgeo4eZLyLamzArUvGytoFbNWs4p4twnk0Ceg0vpaE/fDIYE1rWMh6vMJXf/bhSMrBVcWRS0oRqCpAKukGfUqQhMasWr1gMRT80UYoyTE3r48cYz2wAB2URQnjerf6UXjXZ8G7o2wwn7pkPGWymKmOOWFEFIXv3r7cJH9xLR5Gd38yc17eIAjU+rgU/wAAAABJRU5ErkJggg==) 50% 50%  no-repeat;
+            background-size: 50% 50%;
+        }
+        header .search{
+            width: 18%;
+            height: 100%;
+            margin-top:.56rem;
+            color:#777;
+        }
+
+        /*热门搜索*/
+        .scroll-wrap{
+            position: absolute;
+            top:1.72rem;
+            left:0;
+            right:0;
+            overflow: auto;
+            width: 10rem;
+            background-color: #efefef;
+            margin: auto;
+        }
+        .scroll-wrap ::-webkit-scrollbar{
+            display: none;
+        }
+        .hot-search{
+            margin:.94rem .625rem;
+            width: 80%;
+        }
+        .hot-search .title{
+            color:#888;
+        }
+        .hot-search .hot-list{
+            margin-bottom: 1.34rem;
+        }
+        .hot-search .hot-list ul{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .hot-search .hot-list ul li{
+            padding:.34rem .59rem;
+            margin:.24rem .374rem .16rem 0rem;
+            border-radius:.625rem;
+            background-color: white;
+            border: solid 1px #e4e4e4;
+        }
+        .hot-search .hot-list ul li a{
+            font-size: .375rem;
+        }
+        .history-list .empty-history-list{
+            width: 70%;
+            height:1.562rem ;
+            line-height:1.562rem ;
+            border:solid 1px #e0e0e0;
+            text-align: center;
+            color:#aaa;
+            border-radius: .2rem;
+            margin:0 auto;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <div class="icon-back"></div>
+        <div class="header-content">
+            <form action="get" class="myform">
+                <div class="icon-search"></div>
+                <input type="text" class="search-input" placeholder="请输入商品名称">
+            </form>
+        </div>
+        <div class="search">
+            <a href="javascript:;">搜索</a>
+        </div>
+    </header>
 
+    <div class="scroll-wrap">
+        <!--热门搜索-->
+        <section class="hot-search">
+            <div class="title">热门搜索</div>
+            <div class="hot-list">
+                <ul>
+                    <li><a href="javascript:;">芒果</a></li>
+                    <li><a href="javascript:;">水果</a></li>
+                    <li><a href="javascript:;">火龙果</a></li>
+                    <li><a href="javascript:;">三七女王节</a></li>
+                    <li><a href="javascript:;">香烟</a></li>
+                    <li><a href="javascript:;">酒</a></li>
+                    <li><a href="javascript:;">燕糖</a></li>
+                    <li><a href="javascript:;">奇异果</a></li>
+                    <li><a href="javascript:;">奶</a></li>
+                </ul>
+            </div>
+        </section>
+
+        <!--历史记录-->
+        <section class="history-list hot-search">
+            <div class="title">历史记录</div>
+            <div class="hot-list">
+                <ul>
+                    <li><a href="javascript:;">芒果</a></li>
+                    <li><a href="javascript:;">水果</a></li>
+                    <li><a href="javascript:;">火龙果</a></li>
+                </ul>
+            </div>
+            <div class="empty-history-list">
+               清空历史
+            </div>
+        </section>
+    </div>
 </body>
+<script type="text/javascript" src="../lib/flexible.js"></script>
 </html>

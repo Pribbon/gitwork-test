@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>积分商城</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
     <style type="text/css">
         body{
             background-color: #e0e0e0;
@@ -18,24 +19,153 @@
             background-color: #f9fafd;
             font-size:14px;
             font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid #e0e0e0;
         }
         header .icon-back{
             width:20% ;
-            height: ;
-            /*background: url("../");*/
+            height: 100%;
+            display: block;
+            background: url("img/left-arrow.png") 30% 50% no-repeat;
+            background-size:auto .73rem;
         }
         header .title{
-            width:40% ;
+            width:60% ;
             text-align: center;
+            line-height: 1.72rem;
         }
+
         .scroll-wrap{
             position: absolute;
-            top:1.72rem;
+            top:1.736rem;
             left:0;
             right:0;
             bottom:0;
+            overflow: auto;
             width: 10rem;
             margin: 0 auto;
+        }
+        .scroll-wrap::-webkit-scrollbar{
+            display: none;
+        }
+        .integral-detail{
+            margin-bottom: .4rem;
+        }
+        .integral-detail .available-integral{
+            height: 5.66rem;
+            background-color: white;
+            position: relative;
+            margin-bottom:1px;
+        }
+        .integral-detail .available-integral .wrap{
+            width: 3.5rem;
+            height:3.5rem;
+            border:.6rem solid #ddd;
+            border-radius: 50%;
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+            background-color:#c7c7c7 ;
+        }
+        .integral-detail .available-integral .inner{
+            width: 3rem;
+            height: 3rem ;
+            font-size: 14px;
+            color: #999;
+            border:.25rem solid #c7c7c7;
+            text-align: center;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-color: white;
+        }
+        .integral-detail .available-integral .inner .count{
+            font-weight: bold;
+            color: #999;
+            font-size: 18px;
+        }
+
+
+        .integral-operater{
+            height: 2.4rem;
+        }
+        .integral-operater ul{
+            display: flex;
+            flex-direction: row;
+        }
+        .integral-operater ul li{
+            width: 33.3%;
+            margin-right:1px;
+            background-color: white;
+            padding-bottom: .3125rem;
+        }
+        .integral-operater ul li:last-child{
+            margin:0px;
+        }
+
+        .integral-operater ul li a p:first-child{
+            height:1rem ;
+            width: 1rem ;
+            background-size: contain;
+            margin:.3125rem  auto;
+        }
+        .integral-operater ul li a p:last-child{
+            text-align: center;
+            color: #999;
+        }
+        .integral-operater ul li a .detail{
+            background: url("img/in1.png") no-repeat;
+
+        }
+        .integral-operater ul li a .record{
+            background: url("img/in2.png") no-repeat;
+        }
+        .integral-operater ul li a .regular{
+            background: url("img/in3.png") no-repeat;
+        }
+
+        /*积分兑换列表*/
+        .change-ticket ul {
+            display: flex;
+            flex-direction: row;
+            margin-bottom:1px;
+        }
+        .change-ticket ul li{
+            width: 49.8%;
+            height: 4.69rem;
+            background-color: white;
+            margin-right:1px;
+        }
+        .change-ticket ul li:last-child{
+            margin-right:0;
+        }
+        .change-ticket ul .operate-list1{
+            background:white url(http://img01.bqstatic.com//upload/activity/2016121914354613.jpg@300w_300h_90Q.jpg) 0rem 16% no-repeat;
+            background-size: 100% 50%;
+        }
+        .change-ticket ul .operate-list2{
+            background:white url(http://img01.bqstatic.com//upload/activity/201612191435563.jpg@300w_300h_90Q.jpg) 0rem 16% no-repeat;
+            background-size: 100% 50%;
+        }
+        .change-ticket ul .operate-list3{
+            background:white url(http://img01.bqstatic.com//upload/activity/2016121914360827.jpg@300w_300h_90Q.jpg) 0rem 16% no-repeat;
+            background-size: 100% 50%;
+        }
+        .change-ticket ul .operate-list4{
+            background:white url(http://img01.bqstatic.com//upload/activity/2016121914361893.jpg@300w_300h_90Q.jpg) 0rem 16% no-repeat;
+            background-size: 100% 50%;
+        }
+        .change-ticket ul li .detail{
+           margin:60% 0px 0px 10%;
+        }
+        .change-ticket ul li .detail .integral{
+            color:#e64f1a;
+            margin-top:.3125rem;
         }
     </style>
 </head>
@@ -47,21 +177,83 @@
     <div class="scroll-wrap">
         <div class="integral-detail">
             <div class="available-integral">
-
+                <div class="wrap">
+                    <div class="inner">
+                        <p>可用积分</p>
+                        <p class="count">0</p>
+                    </div>
+                </div>
             </div>
-            <div class="integral-operater"></div>
+            <div class="integral-operater">
+                <ul>
+                    <li >
+                        <a href="javascript:;">
+                            <p class="detail"></p>
+                            <p>积分明细</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <p class="record"></p>
+                            <p>兑换记录</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">
+                            <p class="regular"></p>
+                            <p>积分规则</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
 
+        <!--积分兑换列表-->
         <div class="change-ticket">
             <ul>
-                <li>
+                <li class="operate-list1">
                     <a href="javascript:;">
-                        <div class="img">
+                        <div class="img1">
                             <img src="" alt="">
                         </div>
                         <div class="detail">
                             <p class="coupon">3元优惠券</p>
                             <p class="integral">300积分</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="operate-list2">
+                    <a href="javascript:;">
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail">
+                            <p class="coupon">5元优惠券</p>
+                            <p class="integral">500积分</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li class="operate-list3">
+                    <a href="javascript:;">
+                        <div class="img1">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail">
+                            <p class="coupon">3元优惠券</p>
+                            <p class="integral">300积分</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="operate-list4">
+                    <a href="javascript:;">
+                        <div class="img">
+                            <img src="" alt="">
+                        </div>
+                        <div class="detail">
+                            <p class="coupon">5元优惠券</p>
+                            <p class="integral">500积分</p>
                         </div>
                     </a>
                 </li>

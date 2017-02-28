@@ -369,12 +369,12 @@ footer{
     bottom: 0;
     left:0;
     right:0;
-    background-color:#f0f1f2;
+    background-color:rgba(246,246,246,.95);
 }
 footer ul{
     display: flex;
     flex-direction: row;
-    background-color:rgba(144,144,144,.1);
+    background-color:rgba(246,246,246,.95);
 }
 footer li{
     width: 25%;

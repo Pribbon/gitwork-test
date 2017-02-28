@@ -2,9 +2,124 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>我的订单</title>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <style type="text/css">
+        body{
+            background-color: #efefef;
+        }
+        header{
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+        }
+        header{
+            height: 1.72rem;
+            background-color: #f9fafd;
+            font-size:14px;
+            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        header .icon-back{
+            width:20% ;
+            height: 100%;
+            background: mediumvioletred;
+            display: block;
+            background: url("img/left-arrow.png") 30% 50% no-repeat;
+            background-size:auto .73rem;
+        }
+        header .title{
+            width:60% ;
+            text-align: center;
+            line-height: 1.72rem;
+        }
+        header .refresh{
+            display: block;
+            width: 20%;
+            height: 100%;
+            background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAIHUExURUxpcZmZmZiYmI2NjZmZmZmZmZmZmZmZmZiYmJiYmJiYmKKiopqamqqqqpubm5eXl5aWlpiYmJmZmZmZmZiYmJaWlpqampmZmZmZmZiYmJmZmZmZmX9/f5mZmZmZmZmZmZiYmJmZmZmZmZmZmZ2dnZmZmZeXl5mZmZubm5qampqamv///5mZmZqampiYmJmZmaqqqpmZmZiYmJaWlpmZmZiYmJycnJmZmZmZmZiYmJmZmZmZmZiYmJmZmZaWlpmZmZiYmJmZmZiYmJqampmZmZmZmZmZmZiYmJmZmZiYmJaWlpiYmJiYmJiYmJmZmZmZmZmZmZmZmZmZmZiYmJmZmZiYmJOTk5mZmZmZmZiYmJiYmJiYmJiYmJmZmZiYmJmZmZmZmZmZmZmZmZubm5mZmZmZmZmZmZmZmZiYmJiYmJmZmZGRkZiYmJmZmZmZmZSUlJSUlJeXl5qampmZmZiYmJ+fn5iYmJmZmZ+fn5eXl5mZmZmZmZmZmZmZmZeXl5iYmJmZmZiYmJqampycnJmZmZmZmZmZmZmZmZmZmZmZmZmZmZiYmJiYmJeXl5mZmZiYmJmZmZmZmZeXl5qampmZmZubm5mZmZmZmZmZmZiYmJiYmJmZmZqampmZmZmZmZeXl5iYmJmZmZmZmZmZmZmZmZiYmJmZmZmZmZiYmJiYmJiYmJubm5mZmbI2gDYAAACsdFJOUwD2+Qna+mSgZvK9CxwDEioxnWfdiRFR60v8+zcC2NLTdbDcChWbG5cXVmUB8DjtmQaCbSL9kw1OlFzfPznnLChy8/ch9cS1PsblFsLR75FGHq9xhumpE/HImuOnQxSkXVqSoSl5buQtyoS/DuhBUBgMT0fQnwi2ihBj1TWtg0COPPQ9H3aFqNfsj4iVuCUjYbJqOyZ9JPiq5v5SOlsFdFnF4sG0vIsPpdm71i7thGjQAAACOklEQVRIx2NgGAVg0Cwx0c/CtLvVsoGPCNUaQjXCa6CAqVgwlxcq3meki005j2HIGhRgkiUGlhCVXaNXjak+gQWiTMqJk5OTEaqnzRkoIz1zzRo2dOXcpmAF4mUt7r1mzMzGYuUeYAElfwYGG9Y1a4TQ1PMFgmTDRewQQspFE0BijnMYpIEaOFDVm7mB5KL50YyZrwRy4iw7TA2RQAnWVEx/BSwBOdOBE10DB1CYURNbyC1TBEq5SKJpMM5ZgyUYoD7hggQXsgZtfaCAOjbVampqKv6+GBr4G9esEVbBVL56JQsLy4pVnBgauoB8LSzmL0eOdaR4YJYFRo8oFg1+yBpiEOLuTGvWiGDzgddSdjhAdoECMAokSMkBqmvWLAwgRcPiNWt8ZEjR4L1mzQKSMiUwGXORpGHRmjWuJGkApmy5uSSGkqczKRrmrVkjaU6KhtlOa9bU41NQqiBYh8w3aF+zxkoUj4bKNWtsK5AFaoFpywi3emVg8cPohSxirwPMDzw4NTgAzRNEFbIACiXhUi8gDixqBNDKyDSgjiDs6mMj1mBJ/fGgwhdrKRAGKgMyCtCFtRNBOlJ4MdQnuwIl9LAU3QahoGyoKI0qKsMWBRTlxJq7uONAOnz1+ZkRxW0euEjS0cTuOd5gSXCV4D1FbJL91MnW/Z2Q0l/OBmd4m8tBCwhOW88ZLhAmo7oGniSQrSCLWgNJKVoTSIf5hSVW06CqO6oyBYjI6ipNhtN95OXle1Qt07mHZTMBABjA9P32ykJ1AAAAAElFTkSuQmCC) 53% 50% no-repeat ;
+            background-size:44% 54%;
+        }
+
+        section.order-nav{
+            position: absolute;
+            top:1.72rem;
+            left:0;
+            right:0;
+            margin:1px 0px;
+            background-color: #fff;
+        }
+        section.order-nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        section.order-nav ul li  {
+            width: 18.6%;
+            text-align: center;
+            height:1.5625rem;
+            line-height:1.5625rem ;
+        }
+
+        section.order-nav ul  .theme-color{
+            border-bottom:2px solid #ff3800;
+        }
+        section.order-nav ul  .theme-color a{
+            color:#ff3800;
+        }
+        div.scroll-wrap{
+            position: absolute;
+            top:3.32rem;
+            left:0;
+            right:0;
+            width: 10rem;
+            margin:0 auto;
+        }
+        div.scroll-wrap .order-detail{
+            margin:2.375rem auto;
+        }
+        div.scroll-wrap .order-detail .img{
+            width: 3rem;
+            height: 3rem;
+            background: url("img/order-empty.png") no-repeat;
+            background-size: contain;
+            margin:0 auto;
+        }
+        div.scroll-wrap .order-detail .text{
+            text-align: center;
+            color:#999;
+            font-size: 14px;
+            margin-top:.375rem;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <span class="icon-back"></span>
+        <span class="title">我的订单</span>
+        <span class="refresh"></span>
+    </header>
 
+    <!--导航栏-->
+    <section class="order-nav">
+        <ul>
+            <li  class="theme-color"><a href="javascript:;">全部订单</a></li>
+            <li ><a href="javascript:;">待付款</a></li>
+            <li><a href="javascript:;">待收货</a></li>
+            <li><a href="javascript:;">待评价</a></li>
+            <li><a href="javascript:;">退款/售后</a></li>
+        </ul>
+    </section>
+
+    <!--订单详情-->
+    <div class="scroll-wrap">
+        <section class="order-detail">
+            <div class="img"></div>
+            <p class="text">还没有订单哦</p>
+        </section>
+    </div>
 </body>
+<script type="text/javascript" src="../lib/flexible.js"></script>
 </html>
