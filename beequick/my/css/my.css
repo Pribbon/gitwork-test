@@ -1,0 +1,178 @@
+/*个人主页 头部*/
+body{
+    background-color: #efefef;
+}
+header a{
+    color: #fff;
+}
+header{
+    height: 5rem;
+    background: #ffd600 url("../img/user.png") no-repeat 0.516rem  0.688rem;
+    color: #fff;
+    background-size: 2.278rem 2.278rem;
+}
+header .user{
+    height: 2.225rem;
+    font-size: 0.4rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 0.9rem;
+}
+.user .user-info{
+    height: 1.5rem;
+    width: 6.598rem;
+}
+.user .user-phone{
+    margin-bottom: 0.3rem;
+}
+.user .user-level{
+    background: url("../img/level.png") no-repeat;
+    background-size: contain;
+    height: 1rem;
+    text-align: left;
+}
+.user .user-level a span{
+    display: inline-block;
+    margin:0.25rem 0  0 1rem;
+    color: #e64f1a;
+}
+.user:after{
+    content: ' ';
+    position: absolute;
+    width: .45rem;
+    height: .9rem;
+    background: url(../img/youjian2.png) no-repeat center center;
+    background-size: contain;
+    right: .65rem;
+    top: 1.3rem;
+}
+.tap-action{
+    display: flex;
+    align-items: center;
+}
+header .user-collection{
+    background-color: #f3c800;
+    height: .963rem;
+    font-size: .413rem;
+    padding: .1rem .3rem;
+    margin-top: .7rem;
+}
+.user-collection div{
+    flex-grow: 1;
+    margin: 0 auto;
+    text-align: center;
+    height: 80%;
+    margin-top: .1rem;
+}
+.user-collection div:first-child{
+    border-right: 1px solid #fff;
+}
+.icon-font{
+    width: 1.6em;
+    height: 1.6em;
+    display: inline-block;
+    vertical-align: middle;
+}
+.goods-colle{
+    background: url("../img/1.png") no-repeat center center;
+    background-size: contain;
+    margin-right: .3rem;
+}
+.shop-colle{
+    background: url("../img/dianpu.png") no-repeat center center;
+    background-size: contain;
+    margin-right: .3rem;
+}
+/*我的订单*/
+main{
+    position: relative;
+}
+.my-func{
+    position: relative;
+}
+.my-order{
+    display: flex;
+    background-color: #fff;
+    padding: .45rem .3rem;
+    font-size: .5rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #e0e0e0;
+}
+.my-order .look-order a{
+    color: #999;
+}
+.arrowRight{
+    background: url("../img/youjian.png") no-repeat .4rem;
+    background-size: 100% 50%;
+}
+/*商品支付状态*/
+.goods-status a,.mall-active a{
+    font-size: .4rem;
+}
+.my-list{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.my-list li{
+    width: 25%;
+}
+/*-------公共部分  end------*/
+.goods-status{
+    background-color: #fff;
+    position: relative;
+}
+.goods-status .status-list li{
+    padding-top:7%;
+    padding-bottom: .2rem;
+}
+.goods-status .my-list li figure img,
+.mall-active .my-list li figure img{
+    display: inline-block;
+    width: .61rem;
+    height: .61rem;
+    text-align: center;
+    margin-bottom: .2rem;
+}
+/*商城活动*/
+.mall-active{
+    background-color: #fff;
+    margin-top:.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+.mall-active .active-list li{
+    padding-top: 11%;
+    padding-bottom: 8%;
+}
+.mall-active .active-list li figure img{
+    width: 1rem;
+    height: 1rem;
+}
+.mall-active .active-list{
+    border-bottom: 1px solid #e0e0e0;
+}
+/*用户退出*/
+section{
+    position: relative;
+    background-color: #fff;
+    margin-bottom: .5rem;
+}
+.login-out{
+    position: relative;
+    text-align: center;
+    padding: .5rem 0;
+}
+.login-out a{
+    font-size: .5rem;
+}
+/*头部固定定位*/
+header{
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+}
+.hr-5{
+    height: 5.5rem;
+}
