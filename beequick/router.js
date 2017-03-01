@@ -1,5 +1,5 @@
 //专门处理单页应用的功能
-define(['jquery','underscore','backbone','swiper'],function($,_,backdone,swiper){
+define(['jquery','underscore','backbone'],function($,_,backdone){
     //扩展路由功能
     var w = backdone.Router.extend({
         routes:{

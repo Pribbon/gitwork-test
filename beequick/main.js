@@ -11,6 +11,6 @@ require.config({
     }
 });
 //加载模块，当模块加载完毕之后，执行回调函数
-require(['jquery','flexible','router','swiper'],function($,flexible,router,swiper){
+require(['flexible','router'],function(flexible,router){
         console.log("模块加载成功");
 });
