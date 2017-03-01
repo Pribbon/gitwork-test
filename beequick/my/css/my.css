@@ -99,6 +99,9 @@ main{
     bottom: 1.66rem;
     padding-top:.5rem;
 }
+main::-webkit-scrollbar{
+    display: none;
+}
 .my-func{
     position: relative;
 }
