@@ -4,7 +4,7 @@ define(['jquery'],function($){
     obj.request = function(){
         $.ajax({
             type:'get',
-            url:'json/home_banner_menu.json',
+            url:'public/json/home_banner_menu.json',
             async:true,
             dataType:'json',
             timeout:'3000',
@@ -33,7 +33,7 @@ define(['jquery'],function($){
             }
         });
 
-       $.get('json/home_banner_menu.json',function(result,status,xhr){
+       $.get('public/json/home_banner_menu.json',function(result,status,xhr){
            var data = result.data.menu;
            $.each(data,function(key,value){
                //加载图片
@@ -44,6 +44,12 @@ define(['jquery'],function($){
                 $('.beequik-menu-list-title').eq(key).append(name)
            });
        },'json');
+       $.get("json/hot_sale.json",function(result,status,xhr){
+            var data = result.data;
+            $.each(data,function(key,value){
+
+            });
+       },"json");
     }
     return obj;
 });

@@ -13,7 +13,7 @@ define(['jquery','underscore','backbone','swiper'],function($,_,backdone,swiper)
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
             require(['text!./home/home.html','./home/js/home'],function(tpl,ctrl){
-               $("#scroll-wrap").html(tpl);
+               $("body").prepend(tpl);
                ctrl.request();
             });
         },
@@ -22,7 +22,9 @@ define(['jquery','underscore','backbone','swiper'],function($,_,backdone,swiper)
             window.location.hash = "home";//设置初始化时跳转的页面
         },
         defAction:function(){
-
+            require(["text!404.html"],function(tpl){
+                $("body").html(tpl);
+            });
         }
     });
     //新建路由对象
