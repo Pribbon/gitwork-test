@@ -20,7 +20,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         market:function(){
             require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                $("#wrap-content").html(tpl);
+                $("#wrap-content-inner").html(tpl);
                 req.request('天天特价');
             });
         },
