@@ -13,15 +13,15 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop'],function(tpl,ctrl,req){
-               $("#wrap-content-inner").html(tpl);
-               ctrl.request();
-               req.request();
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop'],function(tpl,ctrl,req) {
+                $("#wrap-content-inner").html(tpl);
+                ctrl.request();
+                req.request();
             });
         },
         market:function(){
             require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                $("#wrap-content").html(tpl);
+                $("#wrap-content-inner").html(tpl);
                 req.request('天天特价');
             });
         },
@@ -42,8 +42,8 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             });
         },
         /*crazyshop:function(){
-          require(['text!.ca'])
-        },*/
+         require(['text!.ca'])
+         },*/
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
