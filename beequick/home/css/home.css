@@ -12,6 +12,7 @@ header{
     right:0;
     width: 10rem;
     margin: auto;
+    z-index: 999;
 }
 
 /*搜索定位*/
@@ -346,6 +347,9 @@ header{
     font-size: 12px;
     border-radius: .16rem;
     margin-left: .09rem;
+}
+.preferred-fruit-list ul li .feature p[data-num="0"]{
+    display: none;
 }
 .preferred-fruit-list ul li .quality{
     color:#999;

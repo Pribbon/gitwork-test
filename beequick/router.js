@@ -14,7 +14,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
             require(['text!./home/home.html','./home/js/home'],function(tpl,ctrl){
-               $("#wrap-content").html(tpl);
+               $("#wrap-content-inner").html(tpl);
                ctrl.request();
             });
         },
@@ -25,19 +25,19 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             });
         },
         order:function(){
-            require(['text!./fresh/fresh.html','./fresh/js/fresh'],function(tpl,req){
-                $("#wrap-content").html(tpl);
+            require(['text!./fresh/fresh.html','./fresh/js/fresh'],function(tpl,req) {
+                $("#wrap-content-inner").html(tpl);
                 req.request();
             });
         },
         shopcar:function(){
             require(['text!./shopCar/shopCar.html'],function(tpl){
-                $("#wrap-content").html(tpl);
+                $("#wrap-content-inner").html(tpl);
             });
         },
         my:function(){
             require(['text!./my/my.html'],function(tpl){
-                $("#wrap-content").html(tpl);
+                $("#wrap-content-inner").html(tpl);
             });
         },
         /*crazyshop:function(){
