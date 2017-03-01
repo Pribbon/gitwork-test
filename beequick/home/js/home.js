@@ -76,16 +76,6 @@ define(['jquery','swiper'],function($,swiper){
                      </li>
                 `;
 
-               /* li += '<li ><div class="img"><a href="javascript:;">' +
-                    '<img src="'+value.img+'" alt=""></a></div>' +
-                    '<p class="describe">'+value.name+'</p>' +
-                    '<div class="feature"><p class="select">精选</p>' +
-                    '<p class="send" data-num="'+value.pm_desc.length+'">'+value.pm_desc+'</p></div>' +
-                    ' <div class="quality">'+value.specifics+'</div>' +
-                    ' <div class="price"> <span class="sale-cost">' +
-                    '￥'+value.price +'</span><span class="prime-cost">' +
-                    '￥'+value.market_price+'</span><span class="operate">'+
-                    '</span></div></li>';*/
             });
             $("#preferred-fruit-list-ul").html(li);
        },"json");
@@ -103,6 +93,11 @@ define(['jquery','swiper'],function($,swiper){
             observeParents: true,
         });
     }
+
+    /*
+    * 扫二维码
+    */
+
 
     return obj;
 });
