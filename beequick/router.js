@@ -13,9 +13,10 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home'],function(tpl,ctrl){
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop'],function(tpl,ctrl,req){
                $("#wrap-content-inner").html(tpl);
                ctrl.request();
+               req.request();
             });
         },
         market:function(){
