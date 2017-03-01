@@ -4,10 +4,10 @@ define(["jquery"],function(){
     obj.request = function(){
         /*加载疯狂秒杀-商品列表*/
         $.get('http://h5.yztctech.net/api/axf/apimiaosha.php',function(result,status,xhr){
-            console.log(result);
+            // console.log(result);
             var data = result.product;
             var html = '';
-            console.log(data);
+            // console.log(data);
             $.each(data,function(key,value){
                 html += '<div class="goods-item">'
                     + '<a class="pic" href="javascript:;"><img src="'+ value.img +'"></a>'

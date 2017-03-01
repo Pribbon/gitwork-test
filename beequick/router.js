@@ -9,6 +9,10 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             "shopcar":"shopcar",
             "my":"my",
             "crazyshop": "crazyshop",
+            "discount":"discount",
+            "hot": "hot",
+            "fruits": "fruits",
+            "milk":"milk",
             "*defAction":"defAction"
         },
         home:function(){
@@ -22,7 +26,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         market:function(){
             require(['text!./market/market.html','./market/js/market'],function(tpl,req){
                 $("#wrap-content-inner").html(tpl);
-                req.request('天天特价');
+                req.request('热销榜');
             });
         },
         order:function(){
@@ -41,9 +45,26 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 $("#wrap-content-inner").html(tpl);
             });
         },
-        /*crazyshop:function(){
-         require(['text!.ca'])
-         },*/
+        discount:function(){
+            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
+                req.request('优选水果');
+            });
+        },
+        hot:function(){
+            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
+                req.request('热销榜');
+            });
+        },
+        milk:function(){
+            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
+                req.request('天天特价');
+            });
+        },
+        fruits:function(){
+            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
+                req.request('牛奶面包');
+            });
+        },
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
