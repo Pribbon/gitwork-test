@@ -93,17 +93,19 @@ header{
 }
 .beequik-menu .beequik-menu-list{
     display: flex;
-    justify-content: center;
+    /*justify-content: center;*/
+    flex-wrap: wrap;
     width: 95%;
     margin-left: 2.5%;
-    padding:0.1rem 0rem;
+    padding:0.2rem 0rem;
 }
 .beequik-menu img{
     width: 100%;
 }
-.beequik-menu .beequik-menu-list li a{
+.beequik-menu .beequik-menu-list li {
     width: 25%;
     color:#353d44;
+    margin-bottom:.2rem;
 }
 .beequik-menu .beequik-menu-list li .title{
     width: 100%;
@@ -294,14 +296,20 @@ header{
 }
 .preferred-fruit-list ul{
     display: flex;
-    flex-direction: row;
-    padding:.5rem 0rem;
+    flex-wrap: wrap;
+    padding:.4rem 0rem;
 }
 .preferred-fruit-list ul li{
-    width: 33.2%;
+    width: 30.8%;
     height: 5.625rem;
-    border-right:1px solid #e0e0e0;
-    padding-left:.218rem;
+    border:1px solid #e0e0e0;
+    border-left:0;
+    border-top:0 ;
+    padding-left:.2rem;
+    padding-bottom: .5rem;
+}
+.preferred-fruit-list ul li:nth-child(3n){
+    margin-right:0px;
 }
 .preferred-fruit-list ul li img{
     width: 90%;
@@ -350,6 +358,7 @@ header{
 }
 .preferred-fruit-list ul li .price .sale-cost{
     color:#ff3800;
+    margin-right:.1rem;
 }
 .preferred-fruit-list ul li .price .prime-cost{
     text-decoration: line-through;

@@ -5,7 +5,7 @@
     <div class="beequick-search-position">
         <div class="scan">
             <div class="icon-scan">
-                <img src="img/clear.png" alt="">
+                <img src="public/img/clear.png" alt="">
             </div>
             <div class="text">扫一扫</div>
         </div>
@@ -15,7 +15,7 @@
         </div>
         <div class="search">
             <div class="icon-search">
-                <img src="img/search1.png" alt="">
+                <img src="public/img/search1.png" alt="">
             </div>
             <div>搜索</div>
         </div>
@@ -34,65 +34,7 @@
 
     <!--菜单栏-->
     <div class="beequik-menu">
-        <ul class="beequik-menu-list">
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-        </ul>
-        <ul class="beequik-menu-list">
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
-            <li>
-                <a href="javascript:;">
-                    <div class="icon-reward beequik-menu-list-reward">
-                    </div>
-                    <p class="title beequik-menu-list-title"></p>
-                </a>
-            </li>
+        <ul class="beequik-menu-list" id="beequik-menu-list">
         </ul>
     </div>
 
@@ -213,67 +155,62 @@
             <img src="public/img/fruit-banner.png" alt="">
         </div>
 
-        <div class="preferred-fruit-list">
-            <ul>
-                <li>
-                    <a href="javascript:;">
-                        <div class="img">
-                            <img src="public/img/friut-list1.png" alt="">
-                        </div>
-                        <p class="describe">蜂觅·15度蜜梨</p>
-                        <div class="feature">
-                            <p class="select">精选</p>
-                            <p class="send">买一赠一</p>
-                        </div>
-                        <div class="quality">
-                            400-500g/盒
-                        </div>
-                        <div class="price">
-                            <span class="sale-cost">￥14.6</span>
-                            <span class="prime-cost">￥16</span>
-                            <span class="operate"></span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="img">
-                            <img src="public/img/fruit-list2.png" alt="">
-                        </div>
-                        <p class="describe">爱鲜蜂·徐香猕猴桃</p>
-                        <div class="feature">
-                            <p class="select">精选</p>
-                            <p class="send">买一赠一</p>
-                        </div>
-                        <div class="quality">
-                            285g 3粒/盒
-                        </div>
-                        <div class="price">
-                            <span class="sale-cost">￥14.6</span>
-                            <span class="prime-cost">￥26</span>
-                            <span class="operate"></span>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="img">
-                            <img src="public/img/friut-list3.png" alt="">
-                        </div>
-                        <p class="describe">爱鲜蜂·赣南蜜桔</p>
-                        <div class="feature">
-                            <p class="select">精选</p>
-                        </div>
-                        <div class="quality">
-                            800-900g/袋
-                        </div>
-                        <div class="price">
-                            <span class="sale-cost">￥6.8</span>
-                            <span class="prime-cost">￥8.5</span>
-                            <span class="operate"></span>
-                        </div>
-                    </a>
-                </li>
+        <div class="preferred-fruit-list" >
+            <ul id="preferred-fruit-list-ul">
+                <!--<li class="preferred-fruit-li">-->
+                    <!--<div class="img">-->
+                        <!--<a href="javascript:;"> </a>-->
+                    <!--</div>-->
+
+                    <!--<p class="describe"></p>-->
+                    <!--<div class="feature">-->
+                        <!--<p class="select"></p>-->
+                        <!--<p class="send"></p>-->
+                    <!--</div>-->
+                    <!--<div class="quality">-->
+                    <!--</div>-->
+                    <!--<div class="price">-->
+                        <!--<span class="sale-cost">￥</span>-->
+                        <!--<span class="prime-cost">￥</span>-->
+                        <!--<span class="operate"></span>-->
+                    <!--</div>-->
+                <!--</li>-->
+                <!--<li class="preferred-fruit-li">-->
+                    <!--<a href="javascript:;">-->
+                        <!--<div class="img">-->
+                        <!--</div>-->
+                        <!--<p class="describe"></p>-->
+                        <!--<div class="feature">-->
+                            <!--<p class="select"></p>-->
+                            <!--<p class="send"></p>-->
+                        <!--</div>-->
+                        <!--<div class="quality">-->
+                        <!--</div>-->
+                        <!--<div class="price">-->
+                            <!--<span class="sale-cost">￥</span>-->
+                            <!--<span class="prime-cost">￥</span>-->
+                            <!--<span class="operate"></span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
+                <!--<li class="preferred-fruit-li">-->
+                    <!--<a href="javascript:;">-->
+                        <!--<div class="img">-->
+                        <!--</div>-->
+                        <!--<p class="describe"></p>-->
+                        <!--<div class="feature">-->
+                            <!--<p class="select"></p>-->
+                            <!--<p class="send"></p>-->
+                        <!--</div>-->
+                        <!--<div class="quality">-->
+                        <!--</div>-->
+                        <!--<div class="price">-->
+                            <!--<span class="sale-cost">￥</span>-->
+                            <!--<span class="prime-cost">￥</span>-->
+                            <!--<span class="operate"></span>-->
+                        <!--</div>-->
+                    <!--</a>-->
+                <!--</li>-->
             </ul>
         </div>
     </div>

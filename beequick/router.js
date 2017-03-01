@@ -13,8 +13,28 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
             require(['text!./home/home.html','./home/js/home'],function(tpl,ctrl){
-               $("body").prepend(tpl);
+               $("#wrap-content").html(tpl);
                ctrl.request();
+            });
+        },
+        market:function(){
+            require(['text!./market/market.html'],function(tpl){
+                $("#wrap-content").html(tpl);
+            });
+        },
+        order:function(){
+            require(['text!./fresh/fresh.html'],function(tpl){
+                $("#wrap-content").html(tpl);
+            });
+        },
+        shopcar:function(){
+            require(['text!./shopCar/shopCar.html'],function(tpl){
+                $("#wrap-content").html(tpl);
+            });
+        },
+        my:function(){
+            require(['text!./my/my.html'],function(tpl){
+                $("#wrap-content").html(tpl);
             });
         },
         //页面初始化

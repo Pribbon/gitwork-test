@@ -34,25 +34,36 @@ define(['jquery','swiper'],function($,swiper){
         */
        $.get('public/json/home_banner_menu.json',function(result,status,xhr){
            var data = result.data.menu;
+           var list = '';
            $.each(data,function(key,value){
-               //加载图片
-                var img = '<img src="'+value.activity.img +'">';
-                $('.beequik-menu-list-reward').eq(key).append(img);
-                //加载name
-                var name = value.activity.name;
-                $('.beequik-menu-list-title').eq(key).append(name)
+               list += '<li> <a href="javascript:;"> <div class="icon-reward">' +
+                   '<img src="'+value.activity.img+'"></div> <p class="title">' +
+                   ''+value.activity.name+'</p> </a></li>';
            });
+           $('#beequik-menu-list').html(list);
        },'json');
 
        /*
        * 加载热售商品数据
        */
-       $.get("json/hot_sale.json",function(result,status,xhr){
+       $.get("public/json/hot_sale.json",function(result,status,xhr){
             var data = result.data;
+            var li = '';
             $.each(data,function(key,value){
-
+                li += '<li ><div class="img"><a href="javascript:;">' +
+                    '<img src="'+value.img+'" alt=""></a></div>' +
+                    '<p class="describe">'+value.name+'</p>' +
+                    '<div class="feature"><p class="select">精选</p>' +
+                    '<p class="send">'+value.pm_desc+'</p></div>' +
+                    ' <div class="quality">'+value.specifics+'</div>' +
+                    ' <div class="price"> <span class="sale-cost">' +
+                    '￥'+value.price +'</span><span class="prime-cost">' +
+                    '￥'+value.market_price+'</span><span class="operate">'+
+                    '</span></div></li>';
             });
+            $("#preferred-fruit-list-ul").html(li);
        },"json");
+
     }
 
     //轮播图的swiper
