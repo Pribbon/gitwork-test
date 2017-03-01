@@ -10,6 +10,8 @@ header{
     top:0;
     left:0;
     right:0;
+    width: 10rem;
+    margin: auto;
 }
 
 /*搜索定位*/
@@ -59,7 +61,7 @@ header{
 
 
 /*内容*/
-.content_wrap{
+.scroll-wrap{
     position:absolute;
     top:1.77rem;
     left:0;
@@ -69,15 +71,18 @@ header{
     width: 10rem;
     margin: 0 auto;
 }
-.content_wrap::-webkit-scrollbar{
+.scroll-wrap::-webkit-scrollbar{
     display: none;
 }
+/*轮播*/
 .beequick-banner{
-    margin-bottom: .31rem;
+    /*height: 4rem;*/
+    /*margin-bottom: .31rem;*/
 }
 .beequick-banner img{
     width: 100%;
 }
+
 
 
 /*菜单栏*/
@@ -369,6 +374,8 @@ footer{
     bottom: 0;
     left:0;
     right:0;
+    width: 10rem;
+    margin: auto;
     background-color:rgba(246,246,246,.95);
 }
 footer ul{
@@ -384,7 +391,7 @@ footer li{
 }
 footer li a div:first-child{
     height:.8rem;
-    margin:0rem 0px 0px 30%;
+    margin:0rem 0px 0px 35%;
 }
 footer li a .text{
     width: 100%;

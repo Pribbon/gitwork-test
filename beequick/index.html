@@ -5,6 +5,8 @@
     <title>爱鲜蜂首页</title>
     <link rel="stylesheet" href="public/css/reset.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="lib/require.js" defer async="true" data-main="main"></script>
 </head>
 <body>
     <!--头部-->
@@ -29,298 +31,38 @@
             </div>
         </div>
     </header>
+
     <!--内容-->
-    <div class="content_wrap">
-        <!--轮播-->
-        <div class="beequick-banner">
-            <div class="wrap">
-                <img src="//img01.bqstatic.com//upload/activity/2016123018095858.jpg@90Q.jpg" alt="">
-            </div>
-        </div>
-
-        <!--菜单栏-->
-        <div class="beequik-menu">
-            <ul class="beequik-menu-list">
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016102716514330.png" alt="">
-                        </div>
-                        <p class="title">抽奖</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016081918061119.png" alt="">
-                        </div>
-                        <p class="title">疯狂秒杀</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016052713532887.png" alt="">
-                        </div>
-                        <p class="title">鲜货直供</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016081917593434.png" alt="">
-                        </div>
-                        <p class="title">大闸蟹</p>
-                    </a>
-                </li>
-            </ul>
-            <ul class="beequik-menu-list">
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016102716514330.png" alt="">
-                        </div>
-                        <p class="title">水果</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016081918061119.png" alt="">
-                        </div>
-                        <p class="title">乳品</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016052713532887.png" alt="">
-                        </div>
-                        <p class="title">美味</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">
-                        <div class="icon-reward">
-                            <img src="http://img01.bqstatic.com//upload/activity/2016081917593434.png" alt="">
-                        </div>
-                        <p class="title">零食</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <!--鲜蜂头条-->
-        <div class="beequik-top-line">
-            <div class="title"><img src="img/nav.jpg" alt=""></div>
-            <div class="detail">
-                <div class="tip">防霾</div>
-                <div class="content">
-                    3M防霾口罩22.8元/3只 1小时闪送
-                </div>
-            </div>
-        </div>
-        <!--商品列表-->
-        <div class="beequik-product-list">
-            <div class="product-list-fist-view">
-                <ul>
-                    <li>
-                        <a href="javascript:;">
-                             <div class="title">
-                                 <p class="milk">骑士酸牛奶</p>
-                                 <p>尝鲜价6.8元</p>
-                             </div>
-                            <div class="img">
-                                <img src="img/pro1.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p class="honey-peer">15度蜜梨</p>
-                                <p>促销价14.8元</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro2.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p class="bergamot-pear">库尔勒香梨</p>
-                                <p>降秋燥29.8元/4斤</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro3.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="product-list-second-view">
-                <ul>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p>天天特价</p>
-                                <p class="nongfu">农夫山泉0.9元</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro4.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p>零食大钜惠</p>
-                                <p class="bean">甘源豆类买一赠一</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro5.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p>鸭货不能停</p>
-                                <p class="duck">飘香鸭锁骨16元</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro6.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="javascript:;">
-                            <div class="title">
-                                <p>金秋大促</p>
-                                <p class="meat">肉禽时蔬100减30</p>
-                            </div>
-                            <div class="img">
-                                <img src="img/pro7.png" alt="">
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-        <!--优选水果-->
-         <div class="beequik-preferred-fruit">
-             <div class="preferred-fruit-nav">
-                 <div class="title">
-                     <div class="logo"></div>
-                     <p class="text">优选水果</p>
-                 </div>
-                 <div class="more">
-                     <a href="javascript:;">
-                         <p>更多&nbsp;&nbsp;</p>
-                         <p class="icon-arrow-right"></p>
-                     </a>
-                 </div>
-             </div>
-             <div class="preferred-fruit-banner">
-                 <img src="img/fruit-banner.png" alt="">
-             </div>
-
-             <div class="preferred-fruit-list">
-                 <ul>
-                     <li>
-                         <a href="javascript:;">
-                            <div class="img">
-                                <img src="img/friut-list1.png" alt="">
-                            </div>
-                             <p class="describe">蜂觅·15度蜜梨</p>
-                             <div class="feature">
-                                 <p class="select">精选</p>
-                                 <p class="send">买一赠一</p>
-                             </div>
-                             <div class="quality">
-                                 400-500g/盒
-                             </div>
-                             <div class="price">
-                                 <span class="sale-cost">￥14.6</span>
-                                 <span class="prime-cost">￥16</span>
-                                 <span class="operate"></span>
-                             </div>
-                         </a>
-                     </li>
-                     <li>
-                         <a href="javascript:;">
-                             <div class="img">
-                                 <img src="img/fruit-list2.png" alt="">
-                             </div>
-                             <p class="describe">爱鲜蜂·徐香猕猴桃</p>
-                             <div class="feature">
-                                 <p class="select">精选</p>
-                                 <p class="send">买一赠一</p>
-                             </div>
-                             <div class="quality">
-                                 285g 3粒/盒
-                             </div>
-                             <div class="price">
-                                 <span class="sale-cost">￥14.6</span>
-                                 <span class="prime-cost">￥26</span>
-                                 <span class="operate"></span>
-                             </div>
-                         </a>
-                     </li>
-                     <li>
-                         <a href="javascript:;">
-                             <div class="img">
-                                 <img src="img/friut-list3.png" alt="">
-                             </div>
-                             <p class="describe">爱鲜蜂·赣南蜜桔</p>
-                             <div class="feature">
-                                 <p class="select">精选</p>
-                             </div>
-                             <div class="quality">
-                                 800-900g/袋
-                             </div>
-                             <div class="price">
-                                 <span class="sale-cost">￥6.8</span>
-                                 <span class="prime-cost">￥8.5</span>
-                                 <span class="operate"></span>
-                             </div>
-                         </a>
-                     </li>
-                 </ul>
-             </div>
-         </div>
-    </div>
+    <div class="scroll-wrap" id="scroll-wrap"></div>
     <!--底部-->
     <footer>
         <ul>
             <li>
-                <a href="javascript:;">
+                <a href="#home">
                     <div class="icon-home"></div>
                     <div class="text">首页</div>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="#market">
                     <div class="icon-market"></div>
                     <div class="text">闪送超市</div>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="#order">
                     <div class="icon-order"></div>
                     <div class="text">新鲜预订</div>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="#shopcar">
                     <div class="icon-shopCar"></div>
                     <div class="text">购物车</div>
                 </a>
             </li>
             <li>
-                <a href="javascript:;">
+                <a href="#my">
                     <div class="icon-person"></div>
                     <div class="text">我的</div>
                 </a>
@@ -328,5 +70,4 @@
         </ul>
     </footer>
 </body>
-<script type="text/javascript" src="lib/flexible.js"></script>
 </html>
