@@ -8,6 +8,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             "order":"order",
             "shopcar":"shopcar",
             "my":"my",
+            "crazyshop": "crazyshop",
             "*defAction":"defAction"
         },
         home:function(){
@@ -18,13 +19,15 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             });
         },
         market:function(){
-            require(['text!./market/market.html'],function(tpl){
+            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
                 $("#wrap-content").html(tpl);
+                req.request('天天特价');
             });
         },
         order:function(){
-            require(['text!./fresh/fresh.html'],function(tpl){
+            require(['text!./fresh/fresh.html','./fresh/js/fresh'],function(tpl,req){
                 $("#wrap-content").html(tpl);
+                req.request();
             });
         },
         shopcar:function(){
@@ -37,6 +40,9 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 $("#wrap-content").html(tpl);
             });
         },
+        /*crazyshop:function(){
+          require(['text!.ca'])
+        },*/
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
