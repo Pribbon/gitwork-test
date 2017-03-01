@@ -1,18 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>购物车</title>
-    <link rel="stylesheet" href="../public/css/reset.css">
-    <link rel="stylesheet" href="./css/shopCar.css">
-</head>
-<body>
-    <!--头部-->
-    <header>
-        <div class="header-wrap">
-            购物车
-        </div>
-    </header>
+<link rel="stylesheet" href="shopCar/css/shopCar.css">
+<!--头部-->
+<header>
+    <div class="header-wrap">
+        购物车
+    </div>
+</header>
+<!--内容-->
+<div class="scroll-wrap">
     <!--用户位置-->
     <div class="position">
         <a href="javascript:;">鲜蜂侠需要您的精确坐标</a>
@@ -40,10 +34,10 @@
     <div class="carContent">
         <div class="car-goods-item">
             <div class="checkbox">
-                <span>
-                    <input class="input_check" type="checkbox" id="check3">
-                    <label for="check3"></label>
-                </span>
+            <span>
+                <input class="input_check" type="checkbox" id="check3">
+                <label for="check3"></label>
+            </span>
             </div>
             <div class="goods-info">
                 <a class="p-pic" href="javascript:;"><img src="./img/0000002288_91150.jpg" alt=""></a>
@@ -62,14 +56,13 @@
     <!--小结-->
     <div class="summary">
         <div class="checkbox">
-            <span>
-                <input class="input_check" type="checkbox" id="check4">
-                <label class="checkall" for="check4"></label>全选
-            </span>
+        <span>
+            <input class="input_check" type="checkbox" id="check4">
+            <label class="checkall" for="check4"></label>全选
+        </span>
         </div>
         <span class="total">共: ￥<em>0</em></span>
         <div class="subBtn">满￥0起送</div>
     </div>
-</body>
-<script type="text/javascript" src="../lib/flexible.js"></script>
-</html>
+</div>
+

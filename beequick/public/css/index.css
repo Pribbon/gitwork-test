@@ -1,4 +1,6 @@
+#wrap-content-inner{
 
+}
 /*底部*/
 footer{
     height:1.66rem;
@@ -6,6 +8,7 @@ footer{
     bottom: 0;
     left:0;
     right:0;
+    z-index: 999;
     width: 10rem;
     margin: auto;
     background-color:rgba(246,246,246,.95);

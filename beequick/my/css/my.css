@@ -10,6 +10,11 @@ header{
     background: #ffd600 url("../img/user.png") no-repeat 0.516rem  0.688rem;
     color: #fff;
     background-size: 2.278rem 2.278rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
 }
 header .user{
     height: 2.225rem;
@@ -54,7 +59,7 @@ header .user{
 header .user-collection{
     background-color: #f3c800;
     height: .963rem;
-    font-size: .413rem;
+    font-size: .3rem;
     padding: .1rem .3rem;
     margin-top: .7rem;
 }
@@ -86,7 +91,13 @@ header .user-collection{
 }
 /*我的订单*/
 main{
-    position: relative;
+    position: absolute;
+    top:5rem;
+    left: 0;
+    right: 0;
+    overflow: auto;
+    bottom: 1.66rem;
+    padding-top:.5rem;
 }
 .my-func{
     position: relative;
@@ -95,7 +106,7 @@ main{
     display: flex;
     background-color: #fff;
     padding: .45rem .3rem;
-    font-size: .5rem;
+    font-size: .4rem;
     justify-content: space-between;
     border-bottom: 1px solid #e0e0e0;
 }
@@ -108,7 +119,7 @@ main{
 }
 /*商品支付状态*/
 .goods-status a,.mall-active a{
-    font-size: .4rem;
+    font-size: .3rem;
 }
 .my-list{
     display: flex;
@@ -165,7 +176,7 @@ section{
     padding: .5rem 0;
 }
 .login-out a{
-    font-size: .5rem;
+    font-size: .43rem;
 }
 /*头部固定定位*/
 header{

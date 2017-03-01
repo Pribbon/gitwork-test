@@ -36,7 +36,7 @@ define(['jquery','swiper'],function($,swiper){
            var data = result.data.menu;
            var list = '';
            $.each(data,function(key,value){
-               list += '<li> <a href="javascript:;"> <div class="icon-reward">' +
+               list += '<li> <a href="'+value.activity.linkurl+'"> <div class="icon-reward">' +
                    '<img src="'+value.activity.img+'"></div> <p class="title">' +
                    ''+value.activity.name+'</p> </a></li>';
            });
@@ -50,16 +50,42 @@ define(['jquery','swiper'],function($,swiper){
             var data = result.data;
             var li = '';
             $.each(data,function(key,value){
-                li += '<li ><div class="img"><a href="javascript:;">' +
+                //运用ES6的字符串模板
+                //当存在json对象属性有些有值，有些没有的时候，则给其元素一个属性data-num="${value.pm_desc.length}
+                //当data-num = '0';时，则设置其元素为display:none;
+                li += `
+                     <li>
+                         <a href="javascript:;">
+                            <div class="img">
+                                <img src="${value.img}" alt="">
+                            </div>
+                             <p class="describe">${value.name}</p>
+                             <div class="feature">
+                                 <p class="select">精选</p>
+                                 <p class="send" data-num="${value.pm_desc.length}" >${value.pm_desc}</p>
+                             </div>
+                             <div class="quality">
+                                ${value.specifics}
+                             </div>
+                             <div class="price">
+                                 <span class="sale-cost">${value.price}</span>
+                                 <span class="prime-cost">${value.market_price}</span>
+                                 <span class="operate"></span>
+                             </div>
+                         </a>
+                     </li>
+                `;
+
+               /* li += '<li ><div class="img"><a href="javascript:;">' +
                     '<img src="'+value.img+'" alt=""></a></div>' +
                     '<p class="describe">'+value.name+'</p>' +
                     '<div class="feature"><p class="select">精选</p>' +
-                    '<p class="send">'+value.pm_desc+'</p></div>' +
+                    '<p class="send" data-num="'+value.pm_desc.length+'">'+value.pm_desc+'</p></div>' +
                     ' <div class="quality">'+value.specifics+'</div>' +
                     ' <div class="price"> <span class="sale-cost">' +
                     '￥'+value.price +'</span><span class="prime-cost">' +
                     '￥'+value.market_price+'</span><span class="operate">'+
-                    '</span></div></li>';
+                    '</span></div></li>';*/
             });
             $("#preferred-fruit-list-ul").html(li);
        },"json");

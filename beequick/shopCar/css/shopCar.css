@@ -6,8 +6,13 @@ i,em{
 }
 /*头部*/
 header{
-    position: relative;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    z-index: 999;
 }
+
 .header-wrap{
     height: 1.718rem;
     background-color: #F9FAFD;
@@ -15,6 +20,14 @@ header{
     font-weight: 700;
     font-size: .48rem;
     line-height: 1.718rem;
+}
+.scroll-wrap{
+    position: absolute;
+    top:1.718rem;
+    left:0;
+    right:0;
+    overflow: auto;
+    bottom: 1.66rem;
 }
 /*用户位置*/
 .position{
@@ -28,7 +41,7 @@ header{
 }
 /*优惠消息*/
 .discount-info{
-    position: relative;
+    /*position: relative;*/
     padding: .2rem .4rem;
     background-color: #fff;
     margin-top: .3rem;
@@ -59,7 +72,7 @@ header{
 }
 .receipt-time,.receipt-remarks{
     font-size: .5rem;
-    padding: .4rem;
+    padding: .6rem;
     background-color: #fff;
     border-bottom: 1px solid #E0E0E0;
 }
@@ -81,7 +94,7 @@ header{
 }
 
 .receipt-remarks{
-    padding: .2rem .4rem;
+    padding: .6rem .4rem;
 }
 .remarks{
     width: 6.3rem;
