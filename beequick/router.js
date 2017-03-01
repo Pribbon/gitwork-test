@@ -13,36 +13,33 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home'],function(tpl,ctrl){
+            require(['text!./home/home.html','./home/js/home','public/js/index.js'],function(tpl,ctrl){
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
             });
         },
         market:function(){
-            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
+            require(['text!./market/market.html','./market/js/market','public/js/index.js'],function(tpl,req){
                 $("#wrap-content-inner").html(tpl);
                 req.request('天天特价');
             });
         },
         order:function(){
-            require(['text!./fresh/fresh.html','./fresh/js/fresh'],function(tpl,req) {
+            require(['text!./fresh/fresh.html','./fresh/js/fresh','public/js/index.js'],function(tpl,req) {
                 $("#wrap-content-inner").html(tpl);
                 req.request();
             });
         },
         shopcar:function(){
-            require(['text!./shopCar/shopCar.html'],function(tpl){
+            require(['text!./shopCar/shopCar.html','public/js/index.js'],function(tpl){
                 $("#wrap-content-inner").html(tpl);
             });
         },
         my:function(){
-            require(['text!./my/my.html'],function(tpl){
+            require(['text!./my/my.html','public/js/index.js'],function(tpl){
                 $("#wrap-content-inner").html(tpl);
             });
         },
-        /*crazyshop:function(){
-         require(['text!.ca'])
-         },*/
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面

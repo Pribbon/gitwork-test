@@ -94,6 +94,7 @@ define(['jquery','swiper'],function($,swiper){
         });
     }
 
+
     /*
     * 扫二维码
     */

@@ -59,7 +59,10 @@ header{
 .beequick-search-position .search div:last-child{
     margin-left:.2rem;
 }
-
+.beequick-search-position .search div:last-child a{
+    display: block;
+    height: 100%;
+}
 
 /*内容*/
 .scroll-wrap{
