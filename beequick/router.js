@@ -17,11 +17,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-<<<<<<< HEAD
-            require(['text!./home/home.html','./home/js/home','public/js/index.js'],function(tpl,ctrl){
-=======
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop'],function(tpl,ctrl,req) {
->>>>>>> 83a0fc3c78fa7df5150ad3acbc7ff4bc6f4f378f
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index.js'],function(tpl,ctrl,req) {
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
@@ -49,8 +45,6 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 $("#wrap-content-inner").html(tpl);
             });
         },
-<<<<<<< HEAD
-=======
         discount:function(){
             require(['text!./market/market.html','./market/js/market'],function(tpl,req){
                 req.request('优选水果');
@@ -71,7 +65,6 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request('牛奶面包');
             });
         },
->>>>>>> 83a0fc3c78fa7df5150ad3acbc7ff4bc6f4f378f
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
