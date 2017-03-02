@@ -24,11 +24,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-<<<<<<< HEAD
-            require(['text!./home/home.html','./home/js/home.js','./home/js/crazyShop','public/js/index.js'],function(tpl,ctrl,req) {
-=======
             require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index'],function(tpl,ctrl,req) {
->>>>>>> b72ab1f599332a1c96c0a6573e5e259681921063
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
