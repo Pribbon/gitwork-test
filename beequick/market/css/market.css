@@ -2,11 +2,6 @@
 header{
     background-color: #ffd600;
     height: 1.718rem;
-    position: fixed;
-    top: 0;
-    left: 0px;
-    right: 0;
-    z-index: 100;
 }
 .header-wrap{
     display: flex;
@@ -44,8 +39,6 @@ header figure figcaption a{
 }
 /*商品内容*/
 main{
-    position: relative;
-    top:1.718rem;
     background-color: #fff;
 }
 /*商品左边 目录栏*/
@@ -221,3 +214,32 @@ main{
     border: 1px solid #e0e0e0;
     border-radius: 50%;
 }
+/*头部 内容 底部 固定定位*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0px;
+    right: 0;
+    z-index: 100;
+}
+main{
+    position: absolute;
+    top: 1.718rem;
+    bottom: 1.66rem;
+    right: 0;
+    left: 0;
+    overflow: auto;
+}
+/*
+footer{
+    height: 1.66rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 10rem;
+    margin: auto;
+    background-color: rgba(246,246,246,.95);
+}
+*/

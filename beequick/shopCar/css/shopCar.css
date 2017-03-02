@@ -86,7 +86,7 @@ header{
 .book:after{
     content:"";
     display: inline-block;
-    background: url("../../img/right.png");
+    background: url("../img/right.png");
     background-size: 100% 100%;
     width: .3rem;
     height: .3rem;
@@ -215,7 +215,7 @@ header{
     display: inline-block;
     width: .6rem;
     height: .6rem;
-    border: 1px solid #E0E0E0;
+    border: 1px solid #999;
     border-radius: 50%;
     vertical-align: middle;
     position: relative;

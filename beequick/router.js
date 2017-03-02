@@ -73,6 +73,12 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request('牛奶面包');
             });
         },
+        crazyData:function(){
+            require(['text!./home/crazyShop.html','./home/js/crazyShop'],function(tpl,req){
+                $("#wrap-content-inner").html(tpl);
+                req.request();
+            });
+        },
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
