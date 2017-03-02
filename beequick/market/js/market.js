@@ -27,7 +27,11 @@ define(['jquery'],function($){
         },'json');
     };
 
-    obj.clickCurrent =function clickCurrent(){
+    obj.getUrl = function(){
+        
+    };
+
+    obj.clickCurrent =function(){
         $('.goods-category-list li a').click(function(){
             $(this).attr("class","current");
             $(this).parent("li").siblings("li").children("a").removeClass("current");
