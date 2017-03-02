@@ -121,6 +121,7 @@ $signPackage = $jssdk->GetSignPackage();
                         address: '七星创意工厂', // 地址详情说明
                         scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
                         infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
+                        console.log(latitude+longitude);
                     });
 
                     console.log(latitude+longitude);
@@ -130,5 +131,5 @@ $signPackage = $jssdk->GetSignPackage();
     })();
 
 </script>
-<script type="text/javascript" src="../lib/flexible.js"></script>
+<script type="text/javascript" src="../public/lib/flexible.js"></script>
 </html>
