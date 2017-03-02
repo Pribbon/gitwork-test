@@ -28,7 +28,9 @@ define(['jquery'],function($){
     };
 
     obj.getUrl = function(){
-        
+        $('goods-category-list li a').click(function(e){
+                console.log(e);
+        });
     };
 
     obj.clickCurrent =function(){
