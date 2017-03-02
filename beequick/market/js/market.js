@@ -11,9 +11,6 @@ define(['jquery'],function($){
             success:function(result,status,xhr){
                 var data = result.data;
                 var html = '';
-                /*for(var value of data){
-                    console.log(value);
-                }*/
                 $.each(data,function(key,value){
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="'+ value.img +'">'
@@ -28,12 +25,15 @@ define(['jquery'],function($){
                 $('#market-goods-item').html(html);
             }
         },'json');
+    };
 
-        /*$.get('http://h5.yztctech.net/api/axf/apicategory.php?category=天天特价',function(result,status,xhr){
-            console.log(result);
-            console.log(xhr);
-        });*/
-    }
+    obj.clickCurrent =function clickCurrent(){
+        $('.goods-category-list li a').click(function(){
+            $(this).attr("class","current");
+            $(this).parent("li").siblings("li").children("a").removeClass("current");
+        });
+    };
+
 
     return obj;
 });
