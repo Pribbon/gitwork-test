@@ -38,9 +38,6 @@ header .refresh{
     background-size:44% 54%;
 }
 /*轮播图*/
-.hr-1-7{
-    height: 1.72rem;
-}
 .banner{
     position: relative;
     width: 100%;
@@ -173,5 +170,14 @@ header .refresh{
 }
 .btn a{
     color: #fff;
+}
+/*内容部分固定定位*/
+main{
+    position: absolute;
+    top: 1.72rem;
+    bottom: 1.66rem;
+    right: 0;
+    left: 0;
+    overflow: auto;
 }
 
