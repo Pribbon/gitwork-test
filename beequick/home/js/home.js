@@ -62,7 +62,7 @@ define(['jquery','swiper'],function($,swiper){
                              <p class="describe">${value.name}</p>
                              <div class="feature">
                                  <p class="select">精选</p>
-                                 <p class="send" data-num="${value.pm_desc.length}" >${value.pm_desc}</p>
+                                 <p class="send" data-num="${value.pm_desc.length}"> ${value.pm_desc}</p>
                              </div>
                              <div class="quality">
                                 ${value.specifics}

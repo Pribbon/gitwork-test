@@ -1,6 +1,8 @@
 define(['jquery'],function($){
     $('#icon-home').click(function(){
-        // console.log($(this));
-        $('#icon-home .icon-home').css("background", "url('public/img/hom2.jpg')");
+        console.log("1");
+        // if()
+        $('#footer-home .icon-home').css("background-image", "url('public/img/home2.png')");
+
     });
 });
