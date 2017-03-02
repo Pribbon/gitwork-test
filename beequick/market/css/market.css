@@ -123,6 +123,9 @@ main{
     border-right: 1px solid #e0e0e0;
     font-size: .4rem;
 }
+.goods-list .title .filter-titles li:last-child{
+    border-right: 0;
+}
 .goods-list .title .filter-titles li:after{
     content: ' ';
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABoAAAAOCAMAAAAG0/xxAAAANlBMVEX////y8vLn5+fX19jMzMy9vL6op6qmpKebmp1+fIFycXVjYGZRTlRLSU9JRkxAPUQuKzItKjGYPIi+AAAAAXRSTlMAQObYZgAAAFtJREFUGNNtzkESgCAMQ9FYxIKgNfe/rBsZkJLdn7cJIBGLhR2QeqsXrVeAPDRnamQEMp2pkXkDxFkyMgvgrctsychTWo32l9Fm6aZOmq3ks+HbbGsB5CjlGOQFS24F+jg8XL0AAAAASUVORK5CYII=") no-repeat;
