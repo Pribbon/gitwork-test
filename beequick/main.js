@@ -7,10 +7,12 @@ require.config({
         'backbone':'public/lib/backbone.min',
         'text' :'public/lib/text',
         'router':'router',
-        'swiper':'public/lib/swiper-3.3.1.min'
+        'swiper':'public/lib/swiper-3.3.1.min',
+        'fastclick' : "public/lib/fastclick"
     }
 });
 //加载模块，当模块加载完毕之后，执行回调函数
-require(['flexible','router'],function(flexible,router){
+require(['flexible','router','fastclick'],function(flexible,router,fastclick){
         console.log("模块加载成功");
+        new fastclick(document.body);
 });
