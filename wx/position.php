@@ -11,6 +11,7 @@ $signPackage = $jssdk->GetSignPackage();
     <title>定位</title>
     <!--<link rel="stylesheet" href="../public/css/reset.css">-->
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+    <script src="./js/jquery-2.2.3.js">
     <style type="text/css">
         body{
             background-color: #FFD82B;
@@ -126,6 +127,15 @@ $signPackage = $jssdk->GetSignPackage();
                 });*/
             }
         });
+
+        $.ajax({
+            type: 'get',
+            url: 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location='+latitude+','+longitude+'&output=json&pois=1&ak=7ddQqdOKgdhyfZ6DOm7AQdpUHsW2uvQE',
+            async: true,
+            dataType: 'jsonp',
+            success:function(result,status,xhr){
+
+            }
 	});
 </script>
 <!--<script type="text/javascript" src="../public/lib/flexible.js"></script>-->
