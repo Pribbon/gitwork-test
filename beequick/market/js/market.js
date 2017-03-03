@@ -1,12 +1,23 @@
 /*闪送超市*/
 define(['jquery'],function($){
     var obj = {};
+    obj.getData = `http://h5.yztctech.net/api/axf/apicategory.php?category=${encodeURIComponent('热销榜')}`;
+
+    /*解析当前目标,拼接到url后面的参数中*/
+    obj.getUrl = function(){
+        $('.goods-category-list li a').click(function(e){
+            let urlStr =  e.target.textContent;
+            obj.getData = `http://h5.yztctech.net/api/axf/apicategory.php?category=${urlStr}`;
+
+            obj.request(obj.getData);
+        });
+    };
+
     /*加载闪送超市商品数据*/
-    obj.request = function(category){
-        console.log(22222);
+    obj.request = function(date){
         $.ajax({
             type: 'get',
-            url: 'http://h5.yztctech.net/api/axf/apicategory.php?category=' + category,
+            url: obj.getData,
             async: true,
             dataType: 'json',
             success:function(result,status,xhr){
@@ -28,12 +39,7 @@ define(['jquery'],function($){
         },'json');
     };
 
-    obj.getUrl = function(){
-        $('goods-category-list li a').click(function(e){
-                console.log(e);
-        });
-    };
-
+    /*给当前选中的li添加样式*/
     obj.clickCurrent =function(){
         $('.goods-category-list li a').click(function(){
             $(this).attr("class","current");

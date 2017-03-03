@@ -23,13 +23,6 @@ define(['jquery'],function($){
                 $('#footer-person #icon-person').attr("class","icon-person2");
         });
     };
-
-    obj.addCar = function(){
-        require(['public/js/addCar'],function(res){
-            res.request();
-        })
-    };
-
     function clearImg(){
         $('#footer-home #icon-home').attr("class","icon-home");
         $('#footer-market #icon-market').attr("class","icon-market");
@@ -37,7 +30,13 @@ define(['jquery'],function($){
         $('#footer-shopCar  #icon-shopCar').attr("class","icon-shopCar");
         $('#footer-person #icon-person').attr("class","icon-person");
     }
-
     obj.click();
+
+    obj.addCar = function(){
+        require(['public/js/addCar'],function(res){
+            res.request();
+        })
+    };
+
     return obj;
 });

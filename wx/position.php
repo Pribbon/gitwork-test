@@ -9,7 +9,7 @@ $signPackage = $jssdk->GetSignPackage();
 <head>
     <meta charset="UTF-8">
     <title>定位</title>
-    <link rel="stylesheet" href="../public/css/reset.css">
+    <!--<link rel="stylesheet" href="../public/css/reset.css">-->
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     <style type="text/css">
         body{
@@ -26,7 +26,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-logo{
             width: 6.547rem;
             height: 3.281rem;
-            background: url("./img/boot_logo-88fb0b99.png") no-repeat center center;
+            /*background: url("./img/boot_logo-88fb0b99.png") no-repeat center center;*/
             background-size: contain;
             /*margin:  3.719rem auto 0;*/
             position: absolute;
@@ -34,7 +34,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-loading{
             width: 1.172rem;
             height: 1.172rem;
-            background: url("./img/boot_gps-5f778fd8.png") no-repeat center center;
+            /*background: url("./img/boot_gps-5f778fd8.png") no-repeat center center;*/
             background-size: contain;
             /*margin: 1rem auto 0;*/
             position: absolute;
@@ -114,7 +114,8 @@ $signPackage = $jssdk->GetSignPackage();
                 var accuracy = res.accuracy; // 位置精度
                 console.log(latitude+longitude);
 
-                 //打开地图
+                /*
+                 * 打开地图
                  wx.openLocation({
                     latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
                     longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
@@ -122,10 +123,10 @@ $signPackage = $jssdk->GetSignPackage();
                     address: '七星创意工厂', // 地址详情说明
                     scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
                     infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
-                });
+                });*/
             }
         });
 	});
 </script>
-<script type="text/javascript" src="../public/lib/flexible.js"></script>
+<!--<script type="text/javascript" src="../public/lib/flexible.js"></script>-->
 </html>

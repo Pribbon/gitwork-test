@@ -10,11 +10,6 @@ header{
     background: #ffd600 url("../img/user.png") no-repeat 0.516rem  0.688rem;
     color: #fff;
     background-size: 2.278rem 2.278rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
 }
 header .user{
     height: 2.225rem;
@@ -65,7 +60,7 @@ header .user-collection{
 }
 .user-collection div{
     flex-grow: 1;
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     text-align: center;
     height: 80%;
     margin-top: .1rem;
@@ -183,9 +178,12 @@ section{
 }
 /*头部固定定位*/
 header{
-    position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
-    width: 100%;
+    /*width: 100%;*/
 }
 .hr-5{
     height: 5.5rem;

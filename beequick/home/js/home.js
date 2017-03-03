@@ -49,7 +49,6 @@ define(['jquery','swiper'],function($,swiper){
        $.get("public/json/hot_sale.json",function(result,status,xhr){
             var data = result.data;
             var li = '';
-            console.log(11111);
             $.each(data,function(key,value){
                 //运用ES6的字符串模板
                 //当存在json对象属性有些有值，有些没有的时候，则给其元素一个属性data-num="${value.pm_desc.length}

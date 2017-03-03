@@ -6,10 +6,6 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             "home":"home",
 
             "market":"market",
-            "discount":"discount",
-            "hot": "hot",
-            "fruits": "fruits",
-            "milk":"milk",
 
             "order":"order",
 
@@ -36,8 +32,9 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         market:function(){
             require(['text!./market/market.html','./market/js/market','public/js/index'],function(tpl,req,res){
                 $("#wrap-content-inner").html(tpl);
-                req.request('热销榜');
-                req.clickCurrent();
+                req.getUrl();
+                req.request();
+                req.clickCurrent();  //切换current样式
                 res.addCar();
             });
         },
@@ -48,33 +45,15 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             });
         },
         shopcar:function(){
-            require(['text!./shopCar/shopCar.html','public/js/index'],function(tpl){
+            require(['text!./shopCar/shopCar.html','./shopCar/js/shopCar','public/js/index'],function(tpl,act){
                 $("#wrap-content-inner").html(tpl);
+                act.getGoodsInfo();
+                act.reduceGoods();
             });
         },
         my:function(){
             require(['text!./my/my.html','public/js/index'],function(tpl){
                 $("#wrap-content-inner").html(tpl);
-            });
-        },
-        discount:function(){
-            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                req.request('优选水果');
-            });
-        },
-        hot:function(){
-            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                req.request('热销榜');
-            });
-        },
-        milk:function(){
-            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                req.request('天天特价');
-            });
-        },
-        fruits:function(){
-            require(['text!./market/market.html','./market/js/market'],function(tpl,req){
-                req.request('牛奶面包');
             });
         },
         crazyData:function(){
