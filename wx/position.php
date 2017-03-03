@@ -26,7 +26,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-logo{
             width: 6.547rem;
             height: 3.281rem;
-            background: url("./img/boot_logo-88fb0b99.png") no-repeat center center;
+            /*background: url("./img/boot_logo-88fb0b99.png") no-repeat center center;*/
             background-size: contain;
             /*margin:  3.719rem auto 0;*/
             position: absolute;
@@ -34,7 +34,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-loading{
             width: 1.172rem;
             height: 1.172rem;
-            background: url("./img/boot_gps-5f778fd8.png") no-repeat center center;
+            /*background: url("./img/boot_gps-5f778fd8.png") no-repeat center center;*/
             background-size: contain;
             /*margin: 1rem auto 0;*/
             position: absolute;
@@ -58,7 +58,6 @@ $signPackage = $jssdk->GetSignPackage();
 </div>
 </body>
 <script type="text/javascript">
-    wx.ready(function(){
         wx.config({
             debug: true, // 开启调试功能，如果为true每进行一次操作都会弹出
             appId: '<?php echo $signPackage["appId"];?>', // 必填，公众号的唯一标识(字符串)
@@ -105,6 +104,7 @@ $signPackage = $jssdk->GetSignPackage();
             ]
         });
 
+	wx.ready(function(){
         wx.getLocation({
             type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
             success: function (res) {
