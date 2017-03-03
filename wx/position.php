@@ -116,7 +116,7 @@ $signPackage = $jssdk->GetSignPackage();
 
                 /*
                  * 打开地图
-                 */wx.openLocation({
+                 wx.openLocation({
                     latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
                     longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
                     name: '育知同创', // 位置名
