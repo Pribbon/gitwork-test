@@ -8,12 +8,13 @@ require.config({
         'text' :'public/lib/text',
         'router':'router',
         'swiper':'public/lib/swiper-3.3.1.min',
-        'fastclick':'public/lib/fastclick'
+        'fastclick':'public/lib/fastclick',
+        'fly':'public/lib/jquery.fly'
     }
 });
 //加载模块，当模块加载完毕之后，执行回调函数
 require(['public/lib/flexible','router','fastclick'],function(flexible,router,FastClick){
-    new FastClick(document.body);
+
 });
 
 

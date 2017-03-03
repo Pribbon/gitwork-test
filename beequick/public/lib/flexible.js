@@ -1,6 +1,6 @@
 ﻿;(function(win, lib) {
     var doc = win.document;
-    var docEl = doc.documentElement;
+    var docEl = doc.documentElement;//documentElement 属性可返回文档的根节点。
     var metaEl = doc.querySelector('meta[name="viewport"]');
     var flexibleEl = doc.querySelector('meta[name="flexible"]');
     var dpr = 0;
@@ -36,7 +36,7 @@
         var isIPhone = win.navigator.appVersion.match(/iphone/gi);
         var devicePixelRatio = win.devicePixelRatio;
         if (isIPhone) {
-            // iOS下，对于2和3的屏，用2倍的方案，其余的用1倍方案
+            // iOS下，对于2的屏，用2倍的方案，对于3的屏，用3倍的方案，其余的用1倍方案
             if (devicePixelRatio >= 3 && (!dpr || dpr >= 3)) {                
                 dpr = 3;
             } else if (devicePixelRatio >= 2 && (!dpr || dpr >= 2)){
@@ -45,7 +45,7 @@
                 dpr = 1;
             }
         } else {
-            // 其他设备下，仍旧使用1倍的方案
+            // 非ios的其他设备下，仍旧使用1倍的方案
             dpr = 1;
         }
         scale = 1 / dpr;
@@ -71,7 +71,7 @@
             width = 540 * dpr;
         }
         var rem = width / 10;
-        docEl.style.fontSize = rem + 'px';
+        docEl.style.fontSize = rem + 'px';//设置不同dpr下的字体大小
         flexible.rem = win.rem = rem;
     }
 
@@ -87,7 +87,7 @@
     }, false);
 
     if (doc.readyState === 'complete') {
-        doc.body.style.fontSize = 12 * dpr + 'px';
+        doc.body.style.fontSize = 12 * dpr + 'px';//设置初始字体大小
     } else {
         doc.addEventListener('DOMContentLoaded', function(e) {
             doc.body.style.fontSize = 12 * dpr + 'px';
