@@ -99,7 +99,7 @@ main{
 }
 /*商品列表 分类固定*/
 .goods-list .title{
-    position: fixed;
+    /*position: fixed;*/
     z-index: 10;
     top:1.718rem;
     left: 2.375rem;

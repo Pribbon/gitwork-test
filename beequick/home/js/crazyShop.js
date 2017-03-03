@@ -16,7 +16,9 @@ define(["jquery"],function(){
             });
             $("#active-goods").html(html);
         },'json');
-    }
+    };
+
+
 
     return obj;
 });

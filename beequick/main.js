@@ -13,7 +13,8 @@ require.config({
 });
 //加载模块，当模块加载完毕之后，执行回调函数
 require(['public/lib/flexible','router','fastclick'],function(flexible,router,FastClick){
-    new FastClick(document.body);
+    // new FastClick(document.body);
+    FastClick.attach(document.body);
 });
 
 
