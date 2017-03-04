@@ -100,8 +100,8 @@ define(['jquery','swiper'],function($,swiper){
         let $scan = $("#scan");
         console.log($scan);
         $scan.click(function () {
-            localStorage.getItem("scanCode");
-            console.log(localStorage.getItem("scanCode"));
+            localStorage.getItem("wxObj");
+            console.log(localStorage.getItem("wxObj"));
         });
     }
 
