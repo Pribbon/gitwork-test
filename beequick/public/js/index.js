@@ -33,14 +33,15 @@ define(['jquery'],function($){
 
             //调用数据库
             require(["./public/js/index_db"],function(tpl){
-                tpl.selectData(function(data){
+                tpl.inserData(id,title,price,count,img);
+               /* tpl.selectData(function(data){
                     if(id === data.id){
                         ++data.count;
                         tpl.updataInfo(data.id,data.count);
                     }else{
                        tpl.inserData(id,title,price,count,img);
                     }
-                });
+                });*/
 
             });
         });

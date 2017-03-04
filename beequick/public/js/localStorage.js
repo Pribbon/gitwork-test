@@ -28,7 +28,11 @@ define(['jquery'],function($){
             var productJSONStr = JSON.stringify(productObj);
             //将产品对象存入本地存储
             window.localStorage.setItem(pId,productJSONStr);
-            console.log("所有key"+window.localStorage.key(0));
+            for(var key in window.localStorage)
+            {
+                console.log(key);
+            }
+            // console.log("所有key"+window.localStorage.key(0));
         });
     }
     return obj;

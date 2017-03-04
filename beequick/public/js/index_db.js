@@ -85,6 +85,7 @@ define(['jquery'],function($){
         var trans = dbInfo.db.transaction(["ShoppingCar"],"readwrite");
         var store = trans.objectStore("ShoppingCar");
         var request= store.openCursor();
+
         request.onsuccess = function(event){
             var cursor = event.target.result;
             fn(cursor.value);
