@@ -35,11 +35,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.getUrl();
                 req.request();
                 req.clickCurrent();  //切换current样式
-<<<<<<< HEAD
-                // req.lazyImg();
-=======
                 res.addCar();
->>>>>>> 9b04e93699806f58cc2a4273463116b2dc30c2fa
             });
         },
         order:function(){
