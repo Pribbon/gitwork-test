@@ -92,12 +92,3 @@ define(['jquery',],function($){
 
     return obj;
 });
-/*//PC端图片懒加载
- obj.lazyImg = function() {
- $('.product-image').lazyload({
- placeholder: "public/img/loading.gif",
- effect: "fadeIn",
- threshold:200,
- // container : "#market-goods-item"
- });
- };*/
