@@ -40,14 +40,14 @@ header{
 .beequick-search-position .title{
     display:  flex;
     flex-direction: row;
-    font-size: 14px;
+    /*font-size: 14px;*/
     font-weight: bold;
     padding:.4rem 0px 0px 1rem;
     width: 46%;
 }
 .beequick-search-position .title .icon-lower-triangle:after{
     content: '▼';
-    font-size: 14px;
+    /*font-size: 14px;*/
 }
 .beequick-search-position .search{
     width: 10%;
@@ -190,20 +190,20 @@ header{
 
 .product-list-fist-view .title p:last-child{
     color: #b1b1b1;
-    font-size:12px;
+    /*font-size:12px;*/
 }
 .product-list-fist-view .title .milk{
     color:#42c2f1;
-    font-size:14px ;
+    /*font-size:14px ;*/
 }
 
 .product-list-fist-view .title .honey-peer{
     color:#e4d428;
-    font-size:14px ;
+    /*font-size:14px ;*/
 }
 .product-list-fist-view .title .bergamot-pear{
     color:#fadd71;
-    font-size:14px ;
+    /*font-size:14px ;*/
 }
 .product-list-second-view ul{
     display: flex;
@@ -231,7 +231,7 @@ header{
     font-weight:bold;
 }
 .product-list-second-view ul li a .title p:last-child {
-    font-size: 11px;
+    /*font-size: 11px;*/
     /*-webkit-transform : scale(.95,.95) ;*/
 }
 .product-list-second-view ul li a .title .nongfu{
@@ -304,7 +304,7 @@ header{
     padding:.4rem 0rem;
 }
 .preferred-fruit-list ul li{
-    width: 30.8%;
+    width: 31%;
     height: 5.625rem;
     border:1px solid #e0e0e0;
     border-left:0;
@@ -313,7 +313,7 @@ header{
     padding-bottom: .5rem;
 }
 .preferred-fruit-list ul li:nth-child(3n){
-    margin-right:0px;
+    border-right:0px;
 }
 .preferred-fruit-list ul li img{
     width: 90%;
@@ -347,7 +347,7 @@ header{
     color: white;
     background-color: #ff0000;
     text-align: center;
-    font-size: 12px;
+    /*font-size: 12px;*/
     border-radius: .16rem;
     margin-left: .09rem;
 }

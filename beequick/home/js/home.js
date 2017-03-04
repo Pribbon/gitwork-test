@@ -55,31 +55,30 @@ define(['jquery','swiper'],function($,swiper){
                 //当data-num = '0';时，则设置其元素为display:none;
                 li += `
                      <li>
-                         <a href="javascript:;">
-                            <div class="img">
-                                <img src="${value.img}" alt="">
-                            </div>
-                             <p class="describe">${value.name}</p>
-                             <div class="feature">
-                                 <p class="select">精选</p>
-                                 <p class="send" data-num="${value.pm_desc.length}"> ${value.pm_desc}</p>
-                             </div>
-                             <div class="quality">
-                                ${value.specifics}
-                             </div>
-                             <div class="price">
-                                 <span class="sale-cost">${value.price}</span>
-                                 <span class="prime-cost">${value.market_price}</span>
-                                 <span class="operate"></span>
-                             </div>
-                         </a>
+                        <div class="img">
+                            <a href="javascript:;">
+                                 <img src="${value.img}" alt="">
+                             </a>
+                        </div>
+                         <p class="describe">${value.name}</p>
+                         <div class="feature">
+                             <p class="select">精选</p>
+                             <p class="send" data-num="${value.pm_desc.length}"> ${value.pm_desc}</p>
+                         </div>
+                         <div class="quality">
+                            ${value.specifics}
+                         </div>
+                         <div class="price">
+                             <span class="sale-cost">${value.price}</span>
+                             <span class="prime-cost">${value.market_price}</span>
+                             <a href="#addCar" class="add-car-fly"><span class="operate"></span></a>
+                         </div>
                      </li>
                 `;
 
             });
-            $("#preferred-fruit-list-ul").html(li);
+            $("#market-goods-item").html(li);
        },"json");
-
     }
 
     //轮播图的swiper

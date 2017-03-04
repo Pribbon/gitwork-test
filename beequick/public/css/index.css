@@ -11,12 +11,12 @@ footer{
     z-index: 999;
     width: 10rem;
     margin: auto;
-    background-color:rgba(246,246,246,.95);
+    background-color:rgba(246,246,246,1);
 }
 footer ul{
     display: flex;
     flex-direction: row;
-    background-color:rgba(246,246,246,.95);
+    background-color:rgba(246,246,246,1);
 }
 footer li{
     width: 25%;
@@ -38,7 +38,7 @@ footer li a .text{
     text-align: center;
     padding:0.08rem;
     color: #777;
-    font-size: 12px;
+    /*font-size: 12px;*/
 }
 .footer-click div:first-child{
     background-size:.9rem  .9rem;
@@ -75,3 +75,5 @@ footer li .icon-person{
 footer li .icon-person2{
     background: url("../img/my2.png") no-repeat;
 }
+/*飞入购物车样式*/
+.u-flyer{display: block;width: 80px;height: 80px;border-radius: 100%;position: fixed;z-index: 9999;}

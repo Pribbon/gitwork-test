@@ -16,23 +16,30 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             "crazyshop": "crazyshop",
             "crazyData": "crazyData",
 
+            "addCar":"addCar",
+
             "*defAction":"defAction"
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index'],function(tpl,ctrl,req) {
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index',],function(tpl,ctrl,req,res) {
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
+                res.addCar();
             });
         },
         market:function(){
-            require(['text!./market/market.html','./market/js/market','public/js/index'],function(tpl,req){
+            require(['text!./market/market.html','./market/js/market','public/js/index'],function(tpl,req,res){
                 $("#wrap-content-inner").html(tpl);
                 req.getUrl();
                 req.request();
                 req.clickCurrent();  //切换current样式
+<<<<<<< HEAD
                 // req.lazyImg();
+=======
+                res.addCar();
+>>>>>>> 9b04e93699806f58cc2a4273463116b2dc30c2fa
             });
         },
         order:function(){
@@ -59,6 +66,12 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request();
             });
         },
+        //加入购物车
+        addCar:function(){
+            require(["public/js/addCar"],function(){
+            });
+        },
+
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
