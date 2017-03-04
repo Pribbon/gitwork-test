@@ -54,6 +54,7 @@ $signPackage = $jssdk->GetSignPackage();
     });
 
     wx.ready(function(){
+        var wxObj = {};
         //点击扫码
         wxObj.scanCode = function(){
             wx.scanQRCode({
