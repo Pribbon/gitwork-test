@@ -26,16 +26,6 @@ define(['jquery',],function($){
                 var html = '';
                 $.each(data, function (key, value) {
                     html += '<dd class="goods-items"><a href="javascript:;">'
-<<<<<<< HEAD
-                        + '<img class="product-image" src="public/img/loading.gif"  data-src="' + value.img + '">'
-                        + '<p class="p-title p-ellipsis">' + value.name + '</p>'
-                        + '<p class="tag"><span class="p-tag selection">精选</span>'
-                        + '<span class="p-tag gift">' + value.pm_desc + '</span></p>'
-                        + '<p class="p-intro p-ellipsis">' + value.specifics + '</p>'
-                        + '<p class="p-price">￥' + value.price + '</p>'
-                        + '<a href="javascript:;"><span class="icon-font add-goods"></span></a>'
-                        + '</a></dd>'
-=======
                         + '<img class="product-image" src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
                         + '<p class="tag"><span class="p-tag selection">精选</span>'
@@ -44,7 +34,6 @@ define(['jquery',],function($){
                         + '<p class="p-price">￥'+ value.price +'</p>'
                         + '<a href="#addCar" class="add-car-fly"><span class="icon-font add-goods"></span></a></div>'
                         + '</dd>'
->>>>>>> 9b04e93699806f58cc2a4273463116b2dc30c2fa
                 });
                 $('#market-goods-item').html(html);
             },
