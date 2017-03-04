@@ -22,11 +22,14 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index',],function(tpl,ctrl,req,res) {
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','./public/js/lazyLoad'],function(tpl,ctrl,req,res) {
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
                 res.addCar();
+                $("#scan").click(function () {
+                    wxObj.scanCode();
+                })
             });
         },
         market:function(){

@@ -143,9 +143,9 @@ $signPackage = $jssdk->GetSignPackage();
 				street:addComp.street,
 				streetNumber:addComp.streetNumber
 			}
+			//把 obj 转换成 str
 			var address = JSON.stringify(o);
-			alert(address);
-			//位置信息存储到本地，后面的页面调用；
+			//位置信息存储到本地(localStorage)，后面的页面调用；
 			localStorage.address = address;
 		});  
 	};
