@@ -29,6 +29,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request();
                 res.addCar();
                 ctrl.scanCode();
+                ctrl.localPosition();
                 storage.inserInfo();
             });
         },

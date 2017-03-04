@@ -110,7 +110,7 @@ define(['jquery','swiper'],function($,swiper){
         var $localPosition = $("#localPosition");
         localStorage.getItem("address");
         alert(localStorage.getItem("address"));
-        $localPosition.html();
+        $localPosition.html(localStorage.getItem("address"));
     }
 
     return obj;
