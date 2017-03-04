@@ -28,7 +28,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 ctrl.request();
                 req.request();
                 res.addCar();
-                ctrl.scanCode();
+                // ctrl.scanCode();
                 storage.inserInfo();
             });
         },
@@ -67,7 +67,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             });
         },
         localPosition:function(){
-            require(['text!./home/crazyShop.html'],function (tpl) {
+            require(['text!./home/crazyShop.html','text!./home/jssdk.php'],function (tpl) {
                 $("#wrap-content-inner").html(tpl);
                 $("#localPosition").on('click',function () {
                     window.location = './public/wx.php';
