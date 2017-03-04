@@ -123,8 +123,8 @@ $signPackage = $jssdk->GetSignPackage();
 	            setTimeout(
 						function (){
 							//页面跳转
-							window.location = '../index.html';	
-						}, 1000);
+//							window.location = '../index.html';
+						}, 3000);
 	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
             }
         });
