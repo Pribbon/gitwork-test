@@ -115,18 +115,56 @@ $signPackage = $jssdk->GetSignPackage();
                 var accuracy = res.accuracy; // 位置精度
                 console.log(latitude+longitude);
 
-                 //打开地图
-                 wx.openLocation({
-                    latitude: latitude, // 纬度，浮点数，范围为90 ~ -90
-                    longitude: longitude, // 经度，浮点数，范围为180 ~ -180。
-                    name: '育知同创', // 位置名
-                    address: '七星创意工厂', // 地址详情说明
-                    scale: 1, // 地图缩放级别,整形值,范围从1~28。默认为最大
-                    infoUrl: '' // 在查看位置界面底部显示的超链接,可点击跳转
-                });
+	            var arr = gcj02tobd09(longitude,latitude);
+	            latitude = arr[1];
+	            longitude = arr[0];
+	            get_address(latitude,longitude);
+	            setTimeout(
+						function (){
+							//页面跳转
+							window.location = '../index.html';	
+						}, 1000);
+	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
             }
         });
 	});
+	
+	//bd09(百度)坐标转换具体地址函数
+	function get_address(lat,lng) {
+   		var point = new BMap.Point(lng,lat);
+		var geoc = new BMap.Geocoder();    
+		geoc.getLocation(point, function(rs){
+			var addComp = rs.addressComponents;
+			var o = {
+				province:addComp.province,
+				city:addComp.city,
+				district:addComp.district,
+				street:addComp.street,
+				streetNumber:addComp.streetNumber
+			}
+			var address = JSON.stringify(o);
+			alert(address);
+			//位置信息存储到本地，后面的页面调用；
+			localStorage.address = address;
+		});  
+	};
+	//定义一些常量
+	var x_PI = 3.14159265358979324 * 3000.0 / 180.0;
+	var PI = 3.1415926535897932384626;
+	var a = 6378245.0;
+	var ee = 0.00669342162296594323;
+	/**
+	 * 火星坐标系 (GCJ-02) 与百度坐标系 (BD-09) 的转换
+	 * 即谷歌、高德 转 百度
+	 */
+	function gcj02tobd09(lng, lat) {
+	    var z = Math.sqrt(lng * lng + lat * lat) + 0.00002 * Math.sin(lat * x_PI);
+	    var theta = Math.atan2(lat, lng) + 0.000003 * Math.cos(lng * x_PI);
+	    var bd_lng = z * Math.cos(theta) + 0.0065;
+	    var bd_lat = z * Math.sin(theta) + 0.006;
+	    return [bd_lng, bd_lat]
+	}
+	
 </script>
 <script type="text/javascript" src="../public/lib/flexible.js"></script>
 </html>
