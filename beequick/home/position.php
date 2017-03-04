@@ -147,6 +147,7 @@ $signPackage = $jssdk->GetSignPackage();
 			var address = JSON.stringify(o);
 			//位置信息存储到本地(localStorage)，后面的页面调用；
 			localStorage.address = address;
+			alert(address);
 		});  
 	};
 	//定义一些常量

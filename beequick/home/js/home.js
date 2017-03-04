@@ -97,7 +97,7 @@ define(['jquery','swiper'],function($,swiper){
     * 扫二维码
     */
     obj.scanCode = function(){
-        let $scan = $("#scan");
+        var $scan = $("#scan");
         console.log($scan);
         $scan.click(function () {
             localStorage.getItem("wxObj");
