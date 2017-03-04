@@ -30,7 +30,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-logo{
             width: 6.547rem;
             height: 3.281rem;
-            background: url("../image/boot_logo-88fb0b99.png") no-repeat center center;
+            background: url("./img/boot_logo-88fb0b99.png") no-repeat center center;
             background-size: contain;
             /*margin:  3.719rem auto 0;*/
             position: absolute;
@@ -38,7 +38,7 @@ $signPackage = $jssdk->GetSignPackage();
         .position .position-loading{
             width: 1.172rem;
             height: 1.172rem;
-            background: url("../image/boot_gps-5f778fd8.png") no-repeat center center;
+            background: url("./img/boot_gps-5f778fd8.png") no-repeat center center;
             background-size: contain;
             /*margin: 1rem auto 0;*/
             position: absolute;
