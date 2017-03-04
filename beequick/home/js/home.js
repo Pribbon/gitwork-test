@@ -100,17 +100,13 @@ define(['jquery','swiper'],function($,swiper){
         var $scan = $("#scan");
         $scan.on('click',function () {
             window.location.href = './public/wx.php';
-           /* var wxObj = JSON.parse(localStorage.getItem("wxObj"));
-            /!*wxObj.scanCode();*!/
-            console.log(localStorage.getItem("wxObj"));*/
         });
     };
 
     obj.localPosition = function () {
         var $localPosition = $("#localPosition");
-        localStorage.getItem("address");
-        alert(localStorage.getItem("address"));
-        $localPosition.html(localStorage.getItem("address"));
+        var addObj = JSON.parse(localStorage.getItem("address"));
+        $localPosition.html(addObj.city + addObj.district + addObj.street);
     }
 
     return obj;

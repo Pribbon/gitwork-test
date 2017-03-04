@@ -67,15 +67,6 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request();
             });
         },
-        localPosition:function(){
-            /*require(['text!./home/crazyShop.html','text!./home/jssdk.php'],function (tpl) {
-                $("#wrap-content-inner").html(tpl);
-                $("#localPosition").on('click',function () {
-                    window.location.href = './public/wx.php';
-                });
-
-            });*/
-        },
         //页面初始化
         initialize:function(){
             window.location.hash = "home";//设置初始化时跳转的页面
