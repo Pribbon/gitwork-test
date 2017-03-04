@@ -115,11 +115,17 @@ $signPackage = $jssdk->GetSignPackage();
                 var accuracy = res.accuracy; // 位置精度
                 console.log(latitude+longitude);
 
+                setTimeout(
+                    function (){
+                        //页面跳转
+                        window.location = '../index.html';
+                }, 3000);
+
 	            var arr = gcj02tobd09(longitude,latitude);
 	            latitude = arr[1];
 	            longitude = arr[0];
 	            get_address(latitude,longitude);
-	            
+
 	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
             }
         });

@@ -103,6 +103,13 @@ define(['jquery','swiper'],function($,swiper){
             localStorage.getItem("wxObj");
             console.log(localStorage.getItem("wxObj"));
         });
+    };
+
+    obj.localPosition = function () {
+        var $localPosition = $("#localPosition");
+        localStorage.getItem("address");
+        alert(localStorage.getItem("address"));
+        $localPosition.html();
     }
 
     return obj;
