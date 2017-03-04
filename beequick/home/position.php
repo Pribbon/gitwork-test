@@ -11,8 +11,8 @@ $signPackage = $jssdk->GetSignPackage();
     
     <script charset="utf-8" src="http://api.map.baidu.com/api?v=2.0&ak=7ddQqdOKgdhyfZ6DOm7AQdpUHsW2uvQE"></script>
     <title>爱鲜蜂</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <script src="../js/lib/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" href="../public/css/reset.css">
+    <script src="../public/lib/jquery-2.2.3.js" type="text/javascript" charset="utf-8"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
     
     <style type="text/css">
@@ -122,7 +122,7 @@ $signPackage = $jssdk->GetSignPackage();
                 setTimeout(
 						function (){
 							//页面跳转
-							window.location = '/index.html';	
+							window.location = '../index.html';	
 						}, 1000);
                 console.log("latitude:"+latitude+" "+"longitude:"+longitude);
                 
@@ -166,6 +166,6 @@ $signPackage = $jssdk->GetSignPackage();
 	}
 	
 </script>
-<script type="text/javascript" src="../js/lib/flexible.js"></script>
+<script type="text/javascript" src="../public/lib/flexible.js"></script>
 
 </html>
