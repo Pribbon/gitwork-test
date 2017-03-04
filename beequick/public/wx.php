@@ -79,7 +79,8 @@ $signPackage = $jssdk->GetSignPackage();
             });
         }
 
-        localStorage.scanCode = wxObj.scanCode;
+        localStorage.setItem("wxObj",JSON.stringify(wxObj));
+        alert(JSON.stringify(wxObj));
     });
 
 
