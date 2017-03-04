@@ -9,7 +9,6 @@ $signPackage = $jssdk->GetSignPackage();
 <head>
     <meta charset="UTF-8">
     <title>定位</title>
-//    <meta http-equiv="refresh" content="5;url=../index.html">
     <link rel="stylesheet" href="../public/css/reset.css">
     <script charset="utf-8" src="http://api.map.baidu.com/api?v=2.0&ak=7ddQqdOKgdhyfZ6DOm7AQdpUHsW2uvQE"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -120,11 +119,7 @@ $signPackage = $jssdk->GetSignPackage();
 	            latitude = arr[1];
 	            longitude = arr[0];
 	            get_address(latitude,longitude);
-	            setTimeout(
-						function (){
-							//页面跳转
-//							window.location = '../index.html';
-						}, 3000);
+	            
 	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
             }
         });
