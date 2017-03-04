@@ -98,11 +98,10 @@ define(['jquery','swiper'],function($,swiper){
     */
     obj.scanCode = function(){
         var $scan = $("#scan");
-        console.log($scan);
         $scan.click(function () {
             // window.location = './public/wx.php';
             var wxObj = JSON.parse(localStorage.getItem("wxObj"));
-            wxObj.scanCode();
+            /*wxObj.scanCode();*/
             console.log(localStorage.getItem("wxObj"));
         });
     };
