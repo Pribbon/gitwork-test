@@ -28,13 +28,16 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request();
                 res.addCar();
                 storage.inserInfo();
+                $("#scan").click(function () {
+                    wxObj.scanCode();
+                })
             });
         },
         market:function(){
             require(['text!./market/market.html','./market/js/market','public/js/index'],function(tpl,req,res){
                 $("#wrap-content-inner").html(tpl);
-                req.getUrl();
                 req.request();
+                req.getUrl();
                 req.clickCurrent();  //切换current样式
                 res.addCar();
             });

@@ -128,14 +128,14 @@ $signPackage = $jssdk->GetSignPackage();
             }
         });
 
-        $.ajax({
+        /*$.ajax({
             type: 'get',
             url: 'http://api.map.baidu.com/geocoder/v2/?callback=renderReverse&location='+latitude+','+longitude+'&output=json&pois=1&ak=7ddQqdOKgdhyfZ6DOm7AQdpUHsW2uvQE',
             async: true,
             dataType: 'jsonp',
             success:function(result,status,xhr){
 
-            }
+            }*/
 	});
 </script>
 <!--<script type="text/javascript" src="../public/lib/flexible.js"></script>-->

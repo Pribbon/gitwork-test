@@ -1,7 +1,8 @@
 /*闪送超市*/
-define(['jquery'],function($){
+define(['jquery',],function($){
     var obj = {};
     obj.getData = `http://h5.yztctech.net/api/axf/apicategory.php?category=${encodeURIComponent('热销榜')}`;
+    var isloaded = false;
 
     /*解析当前目标,拼接到url后面的参数中*/
     obj.getUrl = function(){
@@ -14,16 +15,16 @@ define(['jquery'],function($){
     };
 
     /*加载闪送超市商品数据*/
-    obj.request = function(date){
+    obj.request = function(date) {
         $.ajax({
             type: 'get',
             url: obj.getData,
             async: true,
             dataType: 'json',
-            success:function(result,status,xhr){
+            success: function (result, status, xhr) {
                 var data = result.data;
                 var html = '';
-                $.each(data,function(key,value){
+                $.each(data, function (key, value) {
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
@@ -35,8 +36,11 @@ define(['jquery'],function($){
                         + '</dd>'
                 });
                 $('#market-goods-item').html(html);
+            },
+            complete: function () {
+                //obj.lazyImg();  //PC端图片懒加载
             }
-        },'json');
+        }, 'json');
     };
 
     /*给当前选中的li添加样式*/
@@ -46,6 +50,6 @@ define(['jquery'],function($){
             $(this).parent("li").siblings("li").children("a").removeClass("current");
         });
     };
-
+    
     return obj;
 });
