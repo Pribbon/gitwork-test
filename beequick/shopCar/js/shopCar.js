@@ -32,7 +32,39 @@ define(['jquery'],function($){
             console.log(number);
 
         });
-    }
+    };
 
+    /*查询数据库，获取商品*/
+    obj.addDataBase = function(){
+        require(['public/js/index_db'],function(tpl){
+            var proList = '';
+            $box = $('.carContent');
+            tpl.selectData(function(data){
+                proList = `
+                    <div class="car-goods-item">
+                        <div class="checkbox">
+                        <span>
+                            <input class="input_check" type="checkbox" id="check3">
+                            <label for="check3"></label>
+                        </span>
+                        </div>
+                        <div class="goods-info">
+                            <a class="p-pic" href="javascript:;"><img src="${data.img}"></a>
+                            <a class="p-intro" href="javascript:;">
+                                <p class="p-title">${data.title}</p>
+                                <p class="p-price">￥<em>${data.price}</em></p>
+                                <p class="btns">
+                                    <span class="icon-font reduce"></span>
+                                    <span class="num">${data.count}</span>
+                                    <span class="icon-font add"></span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                $box.append(proList);
+            });
+        });
+    };
     return obj;
 });

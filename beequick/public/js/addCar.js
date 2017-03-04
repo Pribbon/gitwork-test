@@ -2,14 +2,13 @@ define(['jquery','fly'],function($,fly){
         var obj = {};
 
         obj.request = function(){
+            //获取购物车元素
             var offset = $("#icon-shopCar").offset();
 
             $("#market-goods-item").on("click",".add-car-fly",function(event){
                 var addcar = $(this);
-                //find() 方法获得当前元素集合中每个元素的后代。
+                //获取图片
                 var img = addcar.parent().parent().find('img').attr('src');
-                console.log(addcar.parent().parent()[0]);
-                console.log(img);
                 var flyer = $('<img class="u-flyer" src="'+img+'">');
                 flyer.fly({
                     start: {

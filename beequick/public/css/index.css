@@ -1,6 +1,3 @@
-#wrap-content-inner{
-
-}
 /*底部*/
 footer{
     height:1.66rem;
@@ -40,40 +37,43 @@ footer li a .text{
     color: #777;
     /*font-size: 12px;*/
 }
+
 .footer-click div:first-child{
     background-size:.9rem  .9rem;
     background-repeat: no-repeat;
 }
-footer li .icon-home{
+footer ul li:nth-of-type(1) .img-active{
     background-image: url(../img/home.png) ;
 }
-footer li .icon-home2{
-    background-image: url(../img/home2.png);
+footer ul li:nth-of-type(2) .img-active{
+    background-image: url("../img/order.png");
 }
-footer li .icon-market{
-    background: url(../img/foudre.png) no-repeat;
+footer ul li:nth-of-type(3) .img-active{
+    background-image: url(../img/foudre.png) ;
 }
-footer li .icon-market2{
-    background: url(../img/foudre2.png) no-repeat;
+footer ul li:nth-of-type(4) .img-active{
+    background-image: url("../img/shop.png");
+}
+footer ul li:nth-of-type(5) .img-active{
+    background-image: url("../img/my.png");
+}
 
+
+footer ul li:nth-of-type(1) .img-active1{
+    background-image: url(../img/home2.png) ;
 }
-footer li .icon-order{
-    background: url("../img/order.png") no-repeat;
+footer ul li:nth-of-type(2) .img-active1{
+    background-image: url("../img/order2.png");
 }
-footer li .icon-order2{
-    background: url("../img/order2.png") no-repeat;
+footer ul li:nth-of-type(3) .img-active1{
+    background-image: url(../img/foudre2.png) ;
 }
-footer li .icon-shopCar{
-    background: url("../img/shop.png") no-repeat;
+footer ul li:nth-of-type(4) .img-active1{
+    background-image: url("../img/shop2.png");
 }
-footer li .icon-shopCar2{
-    background: url("../img/shop2.png") no-repeat;
+footer ul li:nth-of-type(5) .img-active1{
+    background-image: url("../img/my2.png");
 }
-footer li .icon-person{
-    background: url("../img/my.png") no-repeat;
-}
-footer li .icon-person2{
-    background: url("../img/my2.png") no-repeat;
-}
+
 /*飞入购物车样式*/
 .u-flyer{display: block;width: 80px;height: 80px;border-radius: 100%;position: fixed;z-index: 9999;}

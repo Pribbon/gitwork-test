@@ -108,11 +108,12 @@ header{
 /*购物车商品列表*/
 .carContent{
     position: relative;
-    border-bottom: 1px solid #CECECE;
+
 }
 .car-goods-item{
     background-color: #fff;
     overflow: hidden;
+    border-bottom: 1px solid #CECECE;
 }
 .checkbox{
     float: left;

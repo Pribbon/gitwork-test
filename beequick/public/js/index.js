@@ -1,41 +1,49 @@
 define(['jquery'],function($){
-    var obj = {};
-    obj.click = function(){
-        // $("script[src='./public/js/addCar.js']").remove();
-        $('#footer-home').on("click",function(){
-                clearImg();
-                $('#footer-home #icon-home').attr("class","icon-home2");
-        });
-        $('#footer-market').on("click",function(){
-                clearImg();
-                $('#footer-market #icon-market').attr("class","icon-market2");
-        });
-        $('#footer-order').on("click",function(){
-                clearImg();
-                $('#footer-order #icon-order').attr("class","icon-order2");
-        });
-        $('#footer-shopCar').on("click",function(){
-                clearImg();
-                $('#footer-shopCar #icon-shopCar').attr("class","icon-shopCar2");
-        });
-        $('#footer-person').on("click",function(){
-                clearImg();
-                $('#footer-person #icon-person').attr("class","icon-person2");
-        });
+    var obj = {
     };
-    function clearImg(){
-        $('#footer-home #icon-home').attr("class","icon-home");
-        $('#footer-market #icon-market').attr("class","icon-market");
-        $('#footer-order #icon-order').attr("class","icon-order");
-        $('#footer-shopCar  #icon-shopCar').attr("class","icon-shopCar");
-        $('#footer-person #icon-person').attr("class","icon-person");
+    obj.click = function(){
+        $(".footer-click").on("click",function(event){
+           $(".footer-click").find("div:first-child").removeClass("img-active1");
+           $(".footer-click").find("div:first-child").attr("class","img-active");
+           $(this).find("div:first-child").attr("class","img-active1");
+        });
     }
-    obj.click();
+   obj.click();
 
+
+
+    /*购物车飞入功能*/
     obj.addCar = function(){
         require(['public/js/addCar'],function(res){
             res.request();
         })
+    };
+
+    /*
+    * 加入购物车
+    */
+    obj.addDataBase = function(){
+        $("#market-goods-item").on("click",".add-car-fly",function(event){
+            var addCar = $(this);
+            var id = addCar.parent().parent().attr("id");
+            var title = addCar.parent().parent().find('.describe').text();
+            var price = addCar.parent().parent().find('.sale-cost').text();
+            var count = 1;
+            var img = addCar.parent().parent().find('img').attr('src');
+
+            //调用数据库
+            require(["./public/js/index_db"],function(tpl){
+                tpl.selectData(function(data){
+                    if(id === data.id){
+                        ++data.count;
+                        tpl.updataInfo(data.id,data.count);
+                    }else{
+                       tpl.inserData(id,title,price,count,img);
+                    }
+                });
+
+            });
+        });
     };
 
     return obj;

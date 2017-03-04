@@ -54,7 +54,7 @@ define(['jquery','swiper'],function($,swiper){
                 //当存在json对象属性有些有值，有些没有的时候，则给其元素一个属性data-num="${value.pm_desc.length}
                 //当data-num = '0';时，则设置其元素为display:none;
                 li += `
-                     <li>
+                     <li id="${value.id}">
                         <div class="img">
                             <a href="javascript:;">
                                  <img src="${value.img}" alt="">
@@ -92,11 +92,6 @@ define(['jquery','swiper'],function($,swiper){
             observeParents: true,
         });
     }
-
-
-    /*
-    * 扫二维码
-    */
 
 
     return obj;
