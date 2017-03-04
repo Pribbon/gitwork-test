@@ -96,13 +96,14 @@ define(['jquery','swiper'],function($,swiper){
     /*
     * 扫二维码
     */
-    function scanCode(){
-        let $scan = $("#scan");
+    obj.scanCode = function(){
+        var $scan = $("#scan");
+        console.log($scan);
         $scan.click(function () {
-            localStorage.getItem("scanCode");
-            console.log(localStorage.getItem("scanCode"));
+            localStorage.getItem("wxObj");
+            console.log(localStorage.getItem("wxObj"));
         });
     }
-    scanCode();
+
     return obj;
 });

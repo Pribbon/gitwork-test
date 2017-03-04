@@ -22,7 +22,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','public/js/localStorage','public/js/index_db'],function(tpl,ctrl,req,res,storage,indexDB) {
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','public/js/localStorage','public/js/index_db','text!./public/wx.php'],function(tpl,ctrl,req,res,storage,indexDB) {
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
@@ -33,6 +33,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 $("#scan").click(function () {
                     wxObj.scanCode();
                 })
+                ctrl.scanCode();
             });
         },
         market:function(){
