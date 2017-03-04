@@ -96,14 +96,16 @@ define(['jquery','swiper'],function($,swiper){
     /*
     * 扫二维码
     */
-    /*obj.scanCode = function(){
+    obj.scanCode = function(){
         var $scan = $("#scan");
         console.log($scan);
         $scan.click(function () {
-            window.location = './public/wx.php';
+            // window.location = './public/wx.php';
+            var wxObj = JSON.parse(localStorage.getItem("wxObj"));
+            wxObj.scanCode();
             console.log(localStorage.getItem("wxObj"));
         });
-    };*/
+    };
 
     obj.localPosition = function () {
         var $localPosition = $("#localPosition");
