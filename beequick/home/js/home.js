@@ -100,7 +100,7 @@ define(['jquery','swiper'],function($,swiper){
         var $scan = $("#scan");
         console.log($scan);
         $scan.click(function () {
-            localStorage.getItem("wxObj");
+            window.location = './public/wx.php';
             console.log(localStorage.getItem("wxObj"));
         });
     };
