@@ -32,6 +32,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.getUrl();
                 req.request();
                 req.clickCurrent();  //切换current样式
+                // req.lazyImg();
             });
         },
         order:function(){

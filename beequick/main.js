@@ -8,7 +8,9 @@ require.config({
         'text' :'public/lib/text',
         'router':'router',
         'swiper':'public/lib/swiper-3.3.1.min',
-        'fastclick':'public/lib/fastclick'
+        'fastclick':'public/lib/fastclick',
+        'lazyload' : 'public/lib/jquery.lazyload',
+        'echo' : 'public/lib/echo.min'
     }
 });
 //加载模块，当模块加载完毕之后，执行回调函数
