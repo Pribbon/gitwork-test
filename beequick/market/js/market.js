@@ -38,16 +38,12 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
             },
             complete: function () {
                 $(".goods-list").scroll( function(){//监听滚动事件
-                    lazy.lazyImg();  //PC端图片懒加载
+                    lazy.lazyImg($(".goods-list"));  //PC端图片懒加载
                 });
             }
         }, 'json');
     };
-    console.log($(".goods-list"));
-    console.log($(".goods-list").scrollTop());
-    $(".goods-list").on('scroll', function(){//监听滚动事件
-        lazy.lazyImg();  //PC端图片懒加载
-    });
+
     /*给当前选中的li添加样式*/
     obj.clickCurrent =function(){
         $('.goods-category-list li a').click(function(){

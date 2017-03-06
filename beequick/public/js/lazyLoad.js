@@ -3,18 +3,16 @@ define(['jquery'],function ($) {
 
 
     /*监听窗口滚动事件,检查元素是否在可视范围内*/
-    obj.lazyImg = function (){
-        checkShow();
+    obj.lazyImg = function ($fatherEl){
+        checkShow($fatherEl);
     };
 
-    /*checkShow();*/
-
     /*判断元素是否在可视范围*/
-    function checkShow(){//检查元素是否在可视范围内
+    function checkShow($fatherEl){//检查元素是否在可视范围内
         $('img').each(function(){//遍历每一个元素
             var $cur = $(this);
             if(!!isloaded($cur)){return;}//判断是否已加载
-            if (isShow($cur)) {
+            if (isShow($cur,$fatherEl)) {
                 showImg($cur);
             }else{
                 return;
@@ -33,12 +31,12 @@ define(['jquery'],function ($) {
     }
 
     /*判断图片是否在可视区域内*/
-    function isShow($el){
-        var winH = $(".goods-list").height(),//获取窗口高度
-            scrollH = $(".goods-list").scrollTop(),//获取窗口滚动高度
+    function isShow($el,$fatherEl){
+        var winH = $fatherEl.height(),//获取窗口高度
+            scrollH = $fatherEl.scrollTop(),//获取窗口滚动高度
             top = $el.offset().top;//获取元素距离窗口顶部偏移高度
-        console.log('图片高度:'+top,'滚动高度:'+(scrollH+winH));
-        if(top < winH - 300){
+        // console.log('图片高度:'+top,'滚动高度:'+(scrollH+winH));
+        if(top < winH - 80){
             return true;//在可视范围
         }else{
             return false;//不在可视范围
