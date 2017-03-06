@@ -108,13 +108,12 @@ $signPackage = $jssdk->GetSignPackage();
 
 	wx.ready(function(){
         wx.getLocation({
-            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标(中国标坐标)，可传入'gcj02'
             success: function (res) {
                 var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
                 var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
                 var speed = res.speed; // 速度，以米/每秒计
                 var accuracy = res.accuracy; // 位置精度
-                console.log(latitude+longitude);
 
                 setTimeout(
                     function (){
@@ -127,12 +126,11 @@ $signPackage = $jssdk->GetSignPackage();
 	            longitude = arr[0];
 	            get_address(latitude,longitude);
 
-	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
             }
         });
 	});
 	
-	//bd09(百度)坐标转换具体地址函数
+	//bd09(百度)坐标转换具体地址函数(逆地址解析)
 	function get_address(lat,lng) {
    		var point = new BMap.Point(lng,lat);
 		var geoc = new BMap.Geocoder();    
@@ -149,7 +147,6 @@ $signPackage = $jssdk->GetSignPackage();
 			var address = JSON.stringify(o);
 			//位置信息存储到本地(localStorage)，后面的页面调用；
 			localStorage.address = address;
-			alert(address);
 		});  
 	};
 	//定义一些常量
