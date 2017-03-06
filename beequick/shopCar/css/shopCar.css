@@ -220,6 +220,7 @@ header{
     border-radius: 50%;
     vertical-align: middle;
     position: relative;
+
 }
 .checkbox .input_check:checked+label{
     background-color: #F8CC0B;

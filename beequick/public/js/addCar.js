@@ -8,7 +8,7 @@ define(['jquery','fly'],function($,fly){
             $("#market-goods-item").on("click",".add-car-fly",function(event){
                 var addcar = $(this);
                 //获取图片
-                var img = addcar.parent().parent().find('img').attr('src');
+                var img = addcar.parent().parent().parent().find('img').attr('src');
                 var flyer = $('<img class="u-flyer" src="'+img+'">');
                 flyer.fly({
                     start: {

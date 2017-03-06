@@ -1,5 +1,5 @@
 body, div, dl, dt, dd, ul, ol, nl, li, h1, h2, h3, h4, h5, h6, p, span, a, b, strong, object, iframe, label, img, select, form, input, textarea, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {margin:0;padding:0}
-
+body{overflow-x: hidden;box-sizing: border-box}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
 table {border-collapse:collapse;border-spacing:0}
 a {text-decoration:none;color:#333;}

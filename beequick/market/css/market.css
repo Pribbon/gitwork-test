@@ -177,7 +177,7 @@ main{
     text-overflow: ellipsis;
     overflow: hidden;
 }
-.p-title{
+.describe{
     color: #232b33;
     font-size: .4rem;
     line-height: .8rem;
@@ -198,25 +198,49 @@ main{
     background-color: #FF0000;
     border: 2px solid;
 }
+.market-operater-wrap{
+    position: relative;
+}
 .p-intro{
     font-size: .4rem;
     color: #999;
     line-height: .8rem;
 }
-.p-price{
+.sale-cost{
     font-size: .4rem;
     color: #ff3800;
     line-height: .8rem;
 }
-.add-goods{
+.market-operater-wrap{
+    position: relative;
+}
+.market-operater{
     position: absolute;
-    background:#ff3800 url("../img/add.png") no-repeat;
+    right: .1rem;
+    bottom: .3rem;
+    display: flex;
+    flex-direction: row;
+}
+.reduce-goods{
+    background:#ff3800 url("../img/reduce.png")  no-repeat ;
     background-size: contain;
-    right: .6rem;
-    bottom: .4rem;
     border: 1px solid #e0e0e0;
     border-radius: 50%;
 }
+.goods-amount{
+    display: block;
+    width:20px;
+    text-align: center;
+    margin-top:.3125rem;
+}
+.add-goods{
+    background:#ff3800 url("../img/add.png") no-repeat;
+    background-size: contain;
+    border: 1px solid #e0e0e0;
+    border-radius: 50%;
+}
+
+
 /*头部 内容 底部 固定定位*/
 header{
     position: absolute;

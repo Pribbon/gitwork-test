@@ -43,6 +43,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.getUrl();
                 req.clickCurrent();  //切换current样式
                 res.addCar();
+                res.addDataBase();
             });
         },
         order:function(){
