@@ -24,24 +24,34 @@ define(['jquery'],function($){
     */
     obj.addDataBase = function(){
         $("#market-goods-item").on("click",".add-car-fly",function(event){
+            var flag = true;
             var addCar = $(this);
-            var id = addCar.parent().parent().attr("id");
-            var title = addCar.parent().parent().find('.describe').text();
-            var price = addCar.parent().parent().find('.sale-cost').text();
+            var pId = addCar.parent().parent().parent().attr("id");
+            var title = addCar.parent().parent().parent().find('.describe').text();
+            var price = addCar.parent().parent().parent().find('.sale-cost').text();
             var count = 1;
-            var img = addCar.parent().parent().find('img').attr('src');
+            var img = addCar.parent().parent().parent().find('img').attr('src');
+            var flag = true;
 
             //调用数据库
             require(["./public/js/index_db"],function(tpl){
-                tpl.selectData(function(data){
-                    if(id === data.id){
-                        ++data.count;
-                        tpl.updataInfo(data.id,data.count);
-                    }else{
-                       tpl.inserData(id,title,price,count,img);
-                    }
+                tpl.selectData(function(result){
+                     if(result.length == 0){
+                         tpl.inserData(pId,title,price,count,img);
+                     }
+                    $.each(result,function(key,data){
+                       if(pId == data.id){
+                           ++data.count;
+                           tpl.updataInfo(pId,data.count);
+                           flag = false;
+                           return;
+                       }
+                   });
+                     if(flag){
+                         tpl.inserData(pId,title,price,count,img);
+                     }
+                    flag = true;
                 });
-
             });
         });
     };

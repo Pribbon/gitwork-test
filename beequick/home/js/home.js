@@ -65,13 +65,15 @@ define(['jquery','swiper'],function($,swiper){
                              <p class="select">精选</p>
                              <p class="send" data-num="${value.pm_desc.length}"> ${value.pm_desc}</p>
                          </div>
-                         <div class="quality">
-                            ${value.specifics}
-                         </div>
-                         <div class="price">
-                             <span class="sale-cost">${value.price}</span>
-                             <span class="prime-cost">${value.market_price}</span>
-                             <a href="#addCar" class="add-car-fly"><span class="operate"></span></a>
+                          <div>
+                             <div class="quality">
+                                ${value.specifics}
+                             </div>
+                             <div class="price">
+                                 <span class="sale-cost">￥${value.price}</span>
+                                 <span class="prime-cost">${value.market_price}</span>
+                                <a href="#addCar" class="add-car-fly"><span class="operate"></span></a>
+                             </div>
                          </div>
                      </li>
                 `;
@@ -96,8 +98,15 @@ define(['jquery','swiper'],function($,swiper){
     //扫二维码
     obj.scanCode = function(){
         var $scan = $("#scan");
+<<<<<<< HEAD
+        // console.log($scan);
+        $scan.click(function () {
+            localStorage.getItem("wxObj");
+            // console.log(localStorage.getItem("wxObj"));
+=======
         $scan.on('click',function () {
             window.location.href = './public/wx.php';
+>>>>>>> 4e469f6f136641e1c476270239c3fb7a4a62484a
         });
     };
 

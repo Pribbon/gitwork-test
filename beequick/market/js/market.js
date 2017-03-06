@@ -8,7 +8,6 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
         $('.goods-category-list li a').click(function(e){
             let urlStr =  e.target.textContent;
             obj.getData = `http://h5.yztctech.net/api/axf/apicategory.php?category=${urlStr}`;
-
             obj.request(obj.getData);
         });
     };
@@ -24,14 +23,22 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
                 var data = result.data;
                 var html = '';
                 $.each(data, function (key, value) {
+<<<<<<< HEAD
+                    html += '<dd class="goods-items" id="'+value.id+'"><a href="javascript:;">'
+                        + '<img class="product-image" src="'+ value.img +'"></a>'
+                        + '<p class="describe p-ellipsis">'+ value.name +'</p>'
+=======
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="./public/img/loading.gif" data-src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
+>>>>>>> 4e469f6f136641e1c476270239c3fb7a4a62484a
                         + '<p class="tag"><span class="p-tag selection">精选</span>'
                         + '<span class="p-tag gift">'+ value.pm_desc +'</span></p>'
-                        + '<div><p class="p-intro p-ellipsis">'+ value.specifics +'</p>'
-                        + '<p class="p-price">￥'+ value.price +'</p>'
-                        + '<a href="#addCar" class="add-car-fly"><span class="icon-font add-goods"></span></a></div>'
+                        + '<div class="market-operater-wrap"><p class="p-intro p-ellipsis">'+ value.specifics +'</p>'
+                        + '<p class="sale-cost">￥'+ value.price +'</p>'
+                        + '<div class="market-operater"><span class="icon-font "></span>'
+                        +' <span class="goods-amount"></span> <a href="#addCar" class="add-car-fly">'
+                        + '<span class="icon-font add-goods"></span></a> </div></div>'
                         + '</dd>'
                 });
                 $('#market-goods-item').html(html);

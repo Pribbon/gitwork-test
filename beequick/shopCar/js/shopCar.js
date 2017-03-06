@@ -8,7 +8,6 @@ define(['jquery'],function($){
         status : false
     };
 
-    /*初始化商品信息*/
 
 
     /*获取商品信息*/
@@ -18,7 +17,6 @@ define(['jquery'],function($){
             goodsInfo.name = $(this).children(".goods-info").children(".p-intro").children(".p-title")[0].textContent;
             goodsInfo.price = $(this).children(".goods-info").children(".p-intro").children(".p-price").children("em")[0].textContent;
             goodsInfo.num = $(this).children(".goods-info").children(".p-intro").children(".btns").children(".num")[0].textContent;
-
             goodsInfo.status = $(this).children(".checkbox").children("span").children(".input_check")[0].checked;
         });
         return goodsInfo;
@@ -26,21 +24,32 @@ define(['jquery'],function($){
 
     /*减去商品*/
     obj.reduceGoods = function(){
-        $(".reduce").click(function () {
+        /*$(".reduce").click(function () {
             var goods = obj.getGoodsInfo();
             var number = goods.num;
             console.log(number);
 
-        });
+        });*/
     };
 
-    /*查询数据库，获取商品*/
+    /*
+    * 选中商品
+    */
+    obj.checkProduct = function(){
+
+    };
+
+    /*
+    *查询数据库，获取商品
+    */
     obj.addDataBase = function(){
         require(['public/js/index_db'],function(tpl){
             var proList = '';
             $box = $('.carContent');
-            tpl.selectData(function(data){
-                proList = `
+            tpl.selectData(function(result){
+                // console.log(result);
+                $.each(result,function(key,data){
+                    proList = `
                     <div class="car-goods-item">
                         <div class="checkbox">
                         <span>
@@ -52,7 +61,7 @@ define(['jquery'],function($){
                             <a class="p-pic" href="javascript:;"><img src="${data.img}"></a>
                             <a class="p-intro" href="javascript:;">
                                 <p class="p-title">${data.title}</p>
-                                <p class="p-price">￥<em>${data.price}</em></p>
+                                <p class="p-price"><em>${data.price}</em></p>
                                 <p class="btns">
                                     <span class="icon-font reduce"></span>
                                     <span class="num">${data.count}</span>
@@ -62,7 +71,9 @@ define(['jquery'],function($){
                         </div>
                     </div>
                 `;
-                $box.append(proList);
+                    $box.append(proList);
+                });
+
             });
         });
     };

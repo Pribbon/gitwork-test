@@ -63,7 +63,18 @@ define(['jquery'],function($){
         var trans = dbInfo.db.transaction(["ShoppingCar"],"readwrite");
         // 获取到ObjectStore
         var store = trans.objectStore("ShoppingCar");
-
+        /*selectData(function(data){
+            $.each(data,function(key,pro){
+                console.log(id);
+                console.log("#######");
+                console.log(pro.id);
+                console.log(pro.id == id );
+                if(id === pro.id){
+                    pro.count++;
+                    console.log("有相同数据");
+                }
+            });
+        });*/
         var product = {
             id:id,
             title:title,
@@ -71,6 +82,7 @@ define(['jquery'],function($){
             count:count,
             img:img
         };
+        // console.log("&&&&&&&&&&&&&&&&");
         var request = store.put(product);
         request.onsuccess = function(event){
             console.log("插入数据成功...");
@@ -80,16 +92,23 @@ define(['jquery'],function($){
         };
     };
 
-    // 查询数据
+    // 查询所有数据
     function selectData(fn){
+
         var trans = dbInfo.db.transaction(["ShoppingCar"],"readwrite");
         var store = trans.objectStore("ShoppingCar");
         var request= store.openCursor();
+        var result = [];
         request.onsuccess = function(event){
+            // console.log(".%%%%%%%%%%%%%%%");
             var cursor = event.target.result;
-            fn(cursor.value);
-            //保持继续前行查找，直到已经到达数据的末尾
-            cursor.continue();
+            if(cursor){
+                result.push(cursor.value);
+                //保持继续前行查找，直到已经到达数据的末尾
+                cursor.continue();
+            }else{
+                fn(result);
+            }
         }
     };
     /*
@@ -105,18 +124,13 @@ define(['jquery'],function($){
 
         // get方法中传递的参数就是这个键值
         var request = store.get(pId);
-
         request.onsuccess = function (event) {
             var product = event.target.result;
-            console.log( product.count);
-            console.log( pId);
             product.count = pCount;
-            console.log( product.count);
             store.put(product).onsuccess = function (event) {
                 console.log("修改成功....")
             }
         }
-        // 148706457570713
     }
 
 
