@@ -9,6 +9,7 @@ $signPackage = $jssdk->GetSignPackage();
 <head>
     <meta charset="UTF-8">
     <title>定位</title>
+    <meta http-equiv="refresh" content="5;url=../index.html">
     <link rel="stylesheet" href="../public/css/reset.css">
     <script charset="utf-8" src="http://api.map.baidu.com/api?v=2.0&ak=7ddQqdOKgdhyfZ6DOm7AQdpUHsW2uvQE"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
@@ -107,25 +108,29 @@ $signPackage = $jssdk->GetSignPackage();
 
 	wx.ready(function(){
         wx.getLocation({
-            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标，可传入'gcj02'
+            type: 'wgs84', // 默认为wgs84的gps坐标，如果要返回直接给openLocation用的火星坐标(中国标坐标)，可传入'gcj02'
             success: function (res) {
                 var latitude = res.latitude; // 纬度，浮点数，范围为90 ~ -90
                 var longitude = res.longitude; // 经度，浮点数，范围为180 ~ -180。
                 var speed = res.speed; // 速度，以米/每秒计
                 var accuracy = res.accuracy; // 位置精度
-                console.log(latitude+longitude);
+
+                setTimeout(
+                    function (){
+                        //页面跳转
+                        window.location = '../index.html';
+                }, 3000);
 
 	            var arr = gcj02tobd09(longitude,latitude);
 	            latitude = arr[1];
 	            longitude = arr[0];
 	            get_address(latitude,longitude);
-	            
-	            console.log("latitude:"+latitude+" "+"longitude:"+longitude);
+
             }
         });
 	});
 	
-	//bd09(百度)坐标转换具体地址函数
+	//bd09(百度)坐标转换具体地址函数(逆地址解析)
 	function get_address(lat,lng) {
    		var point = new BMap.Point(lng,lat);
 		var geoc = new BMap.Geocoder();    
@@ -142,7 +147,6 @@ $signPackage = $jssdk->GetSignPackage();
 			var address = JSON.stringify(o);
 			//位置信息存储到本地(localStorage)，后面的页面调用；
 			localStorage.address = address;
-			alert(address);
 		});  
 	};
 	//定义一些常量

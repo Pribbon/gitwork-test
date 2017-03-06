@@ -1,5 +1,5 @@
 <?php
-require_once("jssdk.php");
+require_once("../home/jssdk.php");
 $jssdk = new jssdk("wx9fffbe5fea5c1ec9", "f1a2f3c39011e9a308f3a7e643d71c33");
 $signPackage = $jssdk->GetSignPackage();
 ?>
@@ -55,19 +55,6 @@ $signPackage = $jssdk->GetSignPackage();
 
     wx.ready(function(){
         var wxObj = {};
-        //点击拍照
-        wxObj.photo = function(){
-            wx.chooseImage({
-                count: 1, // 默认9,选择照片的张数
-                sizeType: ['original', 'compressed'], // 可以指定是原图还是压缩图，默认二者都有
-                sourceType: ['album', 'camera'], // 可以指定来源是相册还是相机，默认二者都有
-                success: function (res) {
-                    var localIds = res.localIds; // 返回选定照片的本地ID列表，localId可以作为img标签的src属性显示图片
-                    img.src = localIds[0];
-                }
-            });
-        }
-
         //点击扫码
         wxObj.scanCode = function(){
             wx.scanQRCode({
@@ -78,9 +65,7 @@ $signPackage = $jssdk->GetSignPackage();
                 }
             });
         }
-
-        localStorage.setItem("wxObj",JSON.stringify(wxObj));
-        alert(JSON.stringify(wxObj));
+        wxObj.scanCode();
     });
 
 
