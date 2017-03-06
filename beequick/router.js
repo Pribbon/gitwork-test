@@ -23,11 +23,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         },
         home:function(){
             //通过require来加载html页面，text属于require的一个解析文件的插件
-<<<<<<< HEAD
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','public/js/localStorage','public/js/index_db','text!./public/wx.php'],function(tpl,ctrl,req,res,storage,indexDB) {
-=======
-            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','public/js/localStorage'],function(tpl,ctrl,req,res,storage) {
->>>>>>> 4e469f6f136641e1c476270239c3fb7a4a62484a
+            require(['text!./home/home.html','./home/js/home','./home/js/crazyShop','public/js/index','public/js/index_db','text!./public/wx.php'],function(tpl,ctrl,req,res,indexDB) {
                 $("#wrap-content-inner").html(tpl);
                 ctrl.request();
                 req.request();
@@ -35,15 +31,8 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 indexDB.createDataBase();
                 res.addDataBase();
                 // storage.inserInfo();
-                $("#scan").click(function () {
-                    wxObj.scanCode();
-                })
                 ctrl.scanCode();
-<<<<<<< HEAD
-=======
                 ctrl.localPosition();
-                storage.inserInfo();
->>>>>>> 4e469f6f136641e1c476270239c3fb7a4a62484a
             });
         },
         market:function(){
