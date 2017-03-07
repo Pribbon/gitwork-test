@@ -212,7 +212,7 @@ header{
 .checkall{
     margin-right: .3rem;
 }
-.checkbox .checkall{
+.checkbox .input_check+label{
     display: inline-block;
     width: .6rem;
     height: .6rem;
@@ -220,12 +220,11 @@ header{
     border-radius: 50%;
     vertical-align: middle;
     position: relative;
-
 }
-.checkbox .input_check:checked label{
+.checkbox .input_check:checked+label{
     background-color: #F8CC0B;
 }
-.checkbox .input_check:checked label:after{
+.checkbox .input_check:checked+label:after{
     content: "";
     position: absolute;
     width: .3rem;

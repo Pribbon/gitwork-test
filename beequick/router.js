@@ -18,6 +18,9 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
             "crazyData": "crazyData",
 
             "addCar":"addCar",
+            
+            "search" : "search",
+            "goodslist" : "goodslist",
 
             "*defAction":"defAction"
         },
@@ -69,6 +72,11 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 $("#wrap-content-inner").html(tpl);
                 req.request();
             });
+        },
+        goodslist:function(){
+        	require(['text!./goodsList/product_list01.html'],function(tpl){
+        		$('.scroll-wrap').html(tpl);
+        	});
         },
         //页面初始化
         initialize:function(){

@@ -7,7 +7,7 @@ define(['jquery','swiper'],function($,swiper){
         */
         $.ajax({
             type:'get',
-            url:'public/json/home_banner_menu.json',
+            url:'./public/json/home_banner_menu.json',
             async:true,
             dataType:'json',
             timeout:'3000',
@@ -32,7 +32,7 @@ define(['jquery','swiper'],function($,swiper){
         /*
         * 加载menu数据
         */
-       $.get('public/json/home_banner_menu.json',function(result,status,xhr){
+       $.get('./public/json/home_banner_menu.json',function(result,status,xhr){
            var data = result.data.menu;
            var list = '';
            $.each(data,function(key,value){
@@ -46,7 +46,7 @@ define(['jquery','swiper'],function($,swiper){
        /*
        * 加载热售商品数据
        */
-       $.get("public/json/hot_sale.json",function(result,status,xhr){
+       $.get("./public/json/hot_sale.json",function(result,status,xhr){
             var data = result.data;
             var li = '';
             $.each(data,function(key,value){
