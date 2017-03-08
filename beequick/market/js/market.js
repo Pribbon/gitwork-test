@@ -23,13 +23,19 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
                 var data = result.data;
                 var html = '';
                 $.each(data, function (key, value) {
+<<<<<<< HEAD
+                    html += '<dd class="goods-items" id="'+value.id+'"><a href="javascript:;">'
+                        + '<img class="product-image" src="'+ value.img +'"></a>'
+                        + '<p class="describe p-ellipsis">'+ value.name +'</p>'
+=======
+>>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="./public/img/loading.gif" data-src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
                         + '<p class="tag"><span class="p-tag selection">精选</span>'
                         + '<span class="p-tag gift">'+ value.pm_desc +'</span></p>'
                         + '<div class="market-operater-wrap"><p class="p-intro p-ellipsis">'+ value.specifics +'</p>'
-                        + '<p class="sale-cost">￥'+ value.price +'</p>'
+                        + '<p class="sale-cost">￥<span>'+value.price +'</span></p>'
                         + '<div class="market-operater"><span class="icon-font "></span>'
                         +' <span class="goods-amount"></span> <a href="#addCar" class="add-car-fly">'
                         + '<span class="icon-font add-goods"></span></a> </div></div>'

@@ -37,7 +37,6 @@ footer li a .text{
     color: #777;
     /*font-size: 12px;*/
 }
-
 .footer-click div:first-child{
     background-size:.9rem  .9rem;
     background-repeat: no-repeat;
@@ -74,6 +73,19 @@ footer ul li:nth-of-type(4) .img-active1{
 footer ul li:nth-of-type(5) .img-active1{
     background-image: url("../img/my2.png");
 }
-
-/*飞入购物车样式*/
+footer ul li:nth-of-type(4){
+    position: relative;
+}
+.footer-click   .show-number{
+    position: absolute;
+    width:.6875rem;
+    height:.6875rem;
+    border-radius: 50%;
+    background-color: red;
+    color:white;
+    top:-.125rem;
+    right:-.25rem;
+    text-align: center;
+}
+    /*飞入购物车样式*/
 .u-flyer{display: block;width: 80px;height: 80px;border-radius: 100%;position: fixed;z-index: 9999;}

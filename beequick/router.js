@@ -34,7 +34,13 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 indexDB.createDataBase();
                 res.addDataBase();
                 // storage.inserInfo();
+<<<<<<< HEAD
+                $("#scan").click(function () {
+                    wxObj.scanCode();
+                })
+=======
                 ctrl.scanCode();
+>>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
                 ctrl.localPosition();
             });
         },
@@ -58,9 +64,9 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
         shopcar:function(){
             require(['text!./shopCar/shopCar.html','./shopCar/js/shopCar','public/js/index'],function(tpl,act){
                 $("#wrap-content-inner").html(tpl);
-                act.getGoodsInfo();
                 act.reduceGoods();
                 act.addDataBase();
+                act.checkProduct();
             });
         },
         my:function(){
