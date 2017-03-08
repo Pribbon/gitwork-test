@@ -53,5 +53,13 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
         });
     };
     
+    //展示定位信息
+    obj.localPosition = function () {
+        var $localPosition = $("#position");
+        $localPosition.html('');
+        var addObj = JSON.parse(localStorage.getItem("address"));
+        $localPosition.html(addObj.city + addObj.district + addObj.street);
+    }
+    
     return obj;
 });

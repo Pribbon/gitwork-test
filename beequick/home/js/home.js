@@ -106,6 +106,7 @@ define(['jquery','swiper'],function($,swiper){
     //展示定位信息
     obj.localPosition = function () {
         var $localPosition = $("#localPosition");
+        $localPosition.html('');
         var addObj = JSON.parse(localStorage.getItem("address"));
         $localPosition.html(addObj.city + addObj.district + addObj.street);
     }

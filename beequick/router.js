@@ -44,6 +44,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 req.request();
                 req.getUrl();
                 req.clickCurrent();  //切换current样式
+                req.localPosition();
                 res.addCar();
                 res.addDataBase();
             });
