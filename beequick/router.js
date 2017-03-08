@@ -34,13 +34,7 @@ define(['jquery','underscore','backbone'],function($,_,backdone){
                 indexDB.createDataBase();
                 res.addDataBase();
                 // storage.inserInfo();
-<<<<<<< HEAD
-                $("#scan").click(function () {
-                    wxObj.scanCode();
-                })
-=======
                 ctrl.scanCode();
->>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
                 ctrl.localPosition();
             });
         },

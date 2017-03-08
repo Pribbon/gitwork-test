@@ -23,12 +23,6 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
                 var data = result.data;
                 var html = '';
                 $.each(data, function (key, value) {
-<<<<<<< HEAD
-                    html += '<dd class="goods-items" id="'+value.id+'"><a href="javascript:;">'
-                        + '<img class="product-image" src="'+ value.img +'"></a>'
-                        + '<p class="describe p-ellipsis">'+ value.name +'</p>'
-=======
->>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="./public/img/loading.gif" data-src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
