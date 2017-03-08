@@ -23,8 +23,12 @@
             flex-direction: row;
             border-bottom: 1px solid #e0e0e0;
         }
+        header .back{
+        	display: inline-block;
+    		width: 20%;
+        }
         header .icon-back{
-            width:20% ;
+            width:100% ;
             height: 100%;
             display: block;
             background: url("img/left-arrow.png") 30% 50% no-repeat;
@@ -96,7 +100,7 @@
 </head>
 <body>
     <header>
-        <span class="icon-back"></span>
+        <a class="back" href="javascript:history.back(-1);"><span class="icon-back"></span></a>
         <span class="title">我的订单</span>
         <span class="refresh"></span>
     </header>
@@ -120,5 +124,5 @@
         </section>
     </div>
 </body>
-<script type="text/javascript" src="../lib/flexible.js"></script>
+<script type="text/javascript" src="../public/lib/flexible.js"></script>
 </html>

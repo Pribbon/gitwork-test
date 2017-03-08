@@ -23,9 +23,12 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
                 var data = result.data;
                 var html = '';
                 $.each(data, function (key, value) {
+<<<<<<< HEAD
                     html += '<dd class="goods-items" id="'+value.id+'"><a href="javascript:;">'
                         + '<img class="product-image" src="'+ value.img +'"></a>'
                         + '<p class="describe p-ellipsis">'+ value.name +'</p>'
+=======
+>>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
                     html += '<dd class="goods-items"><a href="javascript:;">'
                         + '<img class="product-image" src="./public/img/loading.gif" data-src="'+ value.img +'"></a>'
                         + '<p class="p-title p-ellipsis">'+ value.name +'</p>'
@@ -42,16 +45,12 @@ define(['jquery','public/js/lazyLoad'],function($,lazy){
             },
             complete: function () {
                 $(".goods-list").scroll( function(){//监听滚动事件
-                    lazy.lazyImg();  //PC端图片懒加载
+                    lazy.lazyImg($(".goods-list"));  //图片懒加载
                 });
             }
         }, 'json');
     };
-    console.log($(".goods-list"));
-    console.log($(".goods-list").scrollTop());
-    $(".goods-list").on('scroll', function(){//监听滚动事件
-        lazy.lazyImg();  //PC端图片懒加载
-    });
+
     /*给当前选中的li添加样式*/
     obj.clickCurrent =function(){
         $('.goods-category-list li a').click(function(){
