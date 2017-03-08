@@ -115,16 +115,19 @@ $signPackage = $jssdk->GetSignPackage();
                 var speed = res.speed; // 速度，以米/每秒计
                 var accuracy = res.accuracy; // 位置精度
 
+
+				var arr = gcj02tobd09(longitude,latitude);
+	            latitude = arr[1];
+	            longitude = arr[0];
+	            get_address(latitude,longitude);
+				
                 setTimeout(
                     function (){
                         //页面跳转
                         window.location.href = '../index.html';
                 }, 3000);
 
-	            var arr = gcj02tobd09(longitude,latitude);
-	            latitude = arr[1];
-	            longitude = arr[0];
-	            get_address(latitude,longitude);
+	            
 
             }
         });
