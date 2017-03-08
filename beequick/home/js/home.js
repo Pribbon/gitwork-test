@@ -70,7 +70,7 @@ define(['jquery','swiper'],function($,swiper){
                                 ${value.specifics}
                              </div>
                              <div class="price">
-                                 <span class="sale-cost">￥<span>${value.price}</span></span>
+                                 <span class="sale-cost">￥${value.price}</span>
                                  <span class="prime-cost">${value.market_price}</span>
                                 <a href="#addCar" class="add-car-fly"><span class="operate"></span></a>
                              </div>
@@ -98,10 +98,6 @@ define(['jquery','swiper'],function($,swiper){
     //扫二维码
     obj.scanCode = function(){
         var $scan = $("#scan");
-<<<<<<< HEAD
-        // console.log($scan);
-=======
->>>>>>> cf59ee9858d63d919b929e62dfe76c4a4335b57e
         $scan.on('click',function () {
             window.location.href = './public/wx.php';
         });
