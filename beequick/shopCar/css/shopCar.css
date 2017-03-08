@@ -203,11 +203,34 @@ header{
 .checkbox span{
     position: relative;
 }
+.checkall-wrap{
+    display: flex;
+    justify-content: space-between;
+    width:58px;
+}
+.selected{
+    display: block;
+    width: .53rem;
+    height: .53rem;
+    border: 1px solid #999;
+    border-radius: 50%;
+}
+.checkall-style{
+    background:url("../img/checked.png") no-repeat;
+    background-size: contain;
+    border: 0;
+    width: .6rem;
+    height: .6rem;
+}
+
+/*
 .input_check{
     position: absolute;
     visibility: hidden;
-    width: .6rem;
-    height: .6rem;
+    width: .53125rem;
+    height: .53125rem;
+    border: 1px solid #999;
+    border-radius: 50%;
 }
 .checkall{
     margin-right: .3rem;
@@ -237,5 +260,6 @@ header{
     border-right: transparent;
     bottom: .25rem;
 }
+*/
 
 

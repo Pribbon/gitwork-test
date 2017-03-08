@@ -63,18 +63,6 @@ define(['jquery'],function($){
         var trans = dbInfo.db.transaction(["ShoppingCar"],"readwrite");
         // 获取到ObjectStore
         var store = trans.objectStore("ShoppingCar");
-        /*selectData(function(data){
-            $.each(data,function(key,pro){
-                console.log(id);
-                console.log("#######");
-                console.log(pro.id);
-                console.log(pro.id == id );
-                if(id === pro.id){
-                    pro.count++;
-                    console.log("有相同数据");
-                }
-            });
-        });*/
         var product = {
             id:id,
             title:title,
@@ -82,7 +70,6 @@ define(['jquery'],function($){
             count:count,
             img:img
         };
-        // console.log("&&&&&&&&&&&&&&&&");
         var request = store.put(product);
         request.onsuccess = function(event){
             console.log("插入数据成功...");
@@ -100,7 +87,6 @@ define(['jquery'],function($){
         var request= store.openCursor();
         var result = [];
         request.onsuccess = function(event){
-            // console.log(".%%%%%%%%%%%%%%%");
             var cursor = event.target.result;
             if(cursor){
                 result.push(cursor.value);
@@ -132,7 +118,22 @@ define(['jquery'],function($){
             }
         }
     }
-
+    /*
+    * 删除数据
+    */
+    function delData(key) {
+        if (!dbInfo.db)
+        {
+            return;
+        }
+        // 获取事务，默认事务是只读的，
+        var trans = dbInfo.db.transaction(["ShoppingCar"],"readwrite");
+        // 获取到ObjectStore
+        var store = trans.objectStore("ShoppingCar");
+        store.delete(key).onsuccess = function (event) {
+            console.log("删除成功....")
+        }
+    }
 
 
     /*
@@ -157,6 +158,10 @@ define(['jquery'],function($){
     //提供修改接口
     obj.updataInfo = function(pId,pCount){
         updataData(pId,pCount);
+    };
+    //提供删除接口
+    obj.deleteInfo = function(pId){
+        delData(pId);
     };
     return obj;
 });

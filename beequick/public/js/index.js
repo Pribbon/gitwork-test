@@ -10,8 +10,6 @@ define(['jquery'],function($){
     }
    obj.click();
 
-
-
     /*购物车飞入功能*/
     obj.addCar = function(){
         require(['public/js/addCar'],function(res){
@@ -28,7 +26,7 @@ define(['jquery'],function($){
             var addCar = $(this);
             var pId = addCar.parent().parent().parent().attr("id");
             var title = addCar.parent().parent().parent().find('.describe').text();
-            var price = addCar.parent().parent().parent().find('.sale-cost').text();
+            var price = addCar.parent().parent().parent().find('.sale-cost span').text();
             var count = 1;
             var img = addCar.parent().parent().parent().find('img').attr('src');
             var flag = true;
@@ -55,6 +53,5 @@ define(['jquery'],function($){
             });
         });
     };
-
     return obj;
 });
