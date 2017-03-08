@@ -36,7 +36,7 @@ define(['jquery'],function ($) {
             scrollH = $fatherEl.scrollTop(),//获取窗口滚动高度
             top = $el.offset().top;//获取元素距离窗口顶部偏移高度
         // console.log('图片高度:'+top,'滚动高度:'+(scrollH+winH));
-        if(top < winH - 80){
+        if(top < winH - 100){
             return true;//在可视范围
         }else{
             return false;//不在可视范围
