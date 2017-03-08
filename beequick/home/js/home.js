@@ -107,7 +107,7 @@ define(['jquery','swiper'],function($,swiper){
     obj.localPosition = function () {
         var $localPosition = $("#localPosition");
         var addObj = JSON.parse(localStorage.getItem("address"));
-        // $localPosition.html(addObj.city + addObj.district + addObj.street);
+        $localPosition.html(addObj.city + addObj.district + addObj.street);
     }
 
     return obj;
