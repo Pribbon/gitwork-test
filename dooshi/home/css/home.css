@@ -1,0 +1,170 @@
+/*首页 头部*/
+header{
+    position: relative;
+    background-color: #fff;
+    height: 6.239rem;
+}
+.home-banner .banner-wrap {
+    height: 4.722rem;
+}
+.hr-23{
+    height: .388rem;
+    background-color: #fff;
+}
+.top-tag{
+    position: absolute;
+    height: .935rem;
+    left: 0;
+    right: 0;
+    top: .364rem;
+    background-color: #fff;
+    box-sizing: border-box;
+    padding: 0 .3rem;
+    display: flex;
+    color: #00BF4A;
+    align-items: center;
+}
+/*用户图标 change*/
+.init-home-user{
+    color: #898A84;
+    padding: .1rem;
+    border-radius: 50%;
+}
+.top-tag-title{
+    color: #00BF4A;
+    font-size: 20px;
+    margin: 0 auto;
+    line-height: .935rem;
+}
+.top-tag .icon-font{
+    font-size: 18px;
+}
+.home-banner figcaption{
+    height: 1.517rem;
+    padding: .3rem .5rem;
+    box-sizing: border-box;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp:3;
+    -webkit-box-orient: vertical;
+    background-color: #fff;
+}
+.home-banner figcaption p{
+    font-size: 16px;
+    overflow: hidden;
+    line-height: 21px;
+}
+
+/*首页内容部分*/
+.home-content-wrap{
+    position: relative;
+    margin-top: 0.8rem;
+}
+.topic-wrap{
+    padding: .3rem;
+}
+/*标题样式*/
+.content-title p{
+    font-size: 1em;
+    height: 1px;
+    border-bottom: 1px solid #A8A8A8;
+    margin: 2px auto;
+    padding: 0 1.9em;
+    display: block;
+    text-align: center;
+}
+.content-title .p-h1{
+    width: 70%;
+}
+.content-title .p-h2{
+    width: 40%;
+}
+.content-title .p-h3{
+    width: 20%;
+}
+.content-title .p-cont{
+    position: relative;
+    top: -.23rem;
+    font-size: 16px;
+    background-color: #F2F2F2;
+    padding: 0 .359rem;
+    color: #A8A8A8;
+}
+/*<!--了解生活--> 内容部分*/
+.home-content-wrap section{
+    margin-top: .3rem;
+}
+
+.topic-wrap{
+    position: relative;
+}
+.aboutLife-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.aboutLife-content li{
+    width: 48%;
+    box-sizing: border-box;
+    margin-top: .3rem;
+    background-color: #fff;
+    border-radius: .359rem;
+    padding-bottom: .3rem;
+    overflow: hidden;
+}
+.aboutLife-content figure > a{
+    height: 2.175rem;
+}
+.aboutLife-content figcaption{
+    padding: 0 .2rem;
+}
+.aboutLife-content figcaption p{
+    margin-top: .2rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.aboutLife-content .topicItem-title{
+    font-size: 16px;
+    color: #212121;
+}
+.aboutLife-content .topicItem-tips{
+    font-size: 12px;
+    color: #C0C0C0;
+}
+/*<!--发现生活--> 内容部分*/
+.findLife-wrap{
+    position: relative;
+}
+.findLife-items{
+    height: 5.035rem;
+    position: relative;
+}
+.findLife-items a{
+    width: 100%;
+    height: 100%;
+}
+.praise{
+    position: absolute;
+    padding: .1rem .4rem;
+    color: #fff;
+    background-color: rgba(0,0,0,.4);
+    font-size: 16px;
+    border-radius: 15px;
+    top: .3rem;
+    right: .3rem;
+}
+.findLife-content .icon-dianzan{
+    display: inline-block;
+    font-size: .6rem;
+}
+.findLife-items .findLife-intro{
+    position: absolute;
+    bottom: .3rem;
+    left: .3rem;
+    font-size: 20px;
+    color: #fff;
+}

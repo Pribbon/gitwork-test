@@ -1,0 +1,80 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,  /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td, /* table elements 表格元素 */
+article,aside,footer,header,nav,section,figcaption,figure /*h5 新标签*/
+{
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+}
+
+/*设置默认字体*/
+body,button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial,"黑体","微软雅黑","\5b8b\4f53",sans-serif;/*用ascii字符表示，使得在任何编码下都无问题*/
+}
+
+@font-face {
+    font-family: 'iconfont';  /* project id 248562 */
+    src: url('//at.alicdn.com/t/font_vx8ck6khqvzhbyb9.eot');
+    src: url('//at.alicdn.com/t/font_vx8ck6khqvzhbyb9.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_vx8ck6khqvzhbyb9.woff') format('woff'),
+    url('//at.alicdn.com/t/font_vx8ck6khqvzhbyb9.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_vx8ck6khqvzhbyb9.svg#iconfont') format('svg');
+}
+.icon-font{
+    font-family: iconfont;
+    display: block;
+}
+
+/*初始化 body*/
+body,html{
+    height: 100%;
+    background-color: #F2F2F2;
+    color: #242424;
+}
+/*header,main,footer模块布局*/
+header,main,footer{
+    margin: 0 auto;
+    max-width: 10rem;
+}
+/*图片设置*/
+img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* img 搭车：让链接里的 img 无边框 */
+fieldset, img {
+    border: none;
+}
+
+/* 将斜体扶正 */
+address, cite, dfn, em, var, i, th{
+    font-style: normal;
+}
+
+/*清除文本框的样式*/
+input:focus, select:focus, textarea:focus {
+    outline:0 none;
+}
+input,button{
+    border: none;
+}
+
+/*清除a标签默认样式*/
+a {
+    text-decoration:none;
+    color: #333;
+    display: block;
+}
+
+/* 重置列表元素 */
+ul,ol{
+    list-style: none;
+}

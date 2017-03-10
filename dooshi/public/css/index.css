@@ -1,0 +1,35 @@
+/*底部栏*/
+footer{
+    max-width: 10rem;
+    background-color: #fff;
+    height: 0.843rem;
+    padding: .3rem 0;
+}
+.footer-tools{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    height: 100%;
+}
+.footer-tools li{
+    width: 25%;
+    font-size: 14px;
+}
+.footer-tools .icon-font{
+    font-family: iconfont;
+    display: block;
+    font-size: .7rem;
+    color: #EBEBEB;
+    width: 1.048rem;
+    height: .59rem;
+    margin: 4px auto;
+}
+.footer-tools .icon-find{
+    font-size: .5rem;
+    width: .489rem;
+    line-height: 0.79rem;
+}
+footer{
+    margin-top: 3rem;
+}
